@@ -2,7 +2,8 @@
 {
     static void Main(string[] args)
     {
-        NETriangle();
+        RightAlignTriangle();
+        // NETriangle();
         // Triangle();
         // CalculateFunction();
     }
@@ -63,7 +64,21 @@
             Console.WriteLine();
             width++;
             max--;
+        }      
+    }
+
+    static void RightAlignTriangle()
+    {
+        Console.WriteLine("Input a string and it will make a right-aligned triangle");
+
+        string input = Console.ReadLine()!;        
+        int height = input.Length;
+
+        Console.WriteLine();
+        for(int i = 0; i < height; i++)
+        {
+            Console.WriteLine(input[i]);
+            //Console.WriteLine();
         }
-        
     }
 }
