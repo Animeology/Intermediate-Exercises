@@ -2,7 +2,8 @@
 {
     static void Main(string[] args)
     {
-        MathStatistics();
+        Alphabet();
+        //MathStatistics();
         //RepetitiveStructures();
         //InfiniteDivide();
         //AccessControl();
@@ -12,6 +13,16 @@
         //NETriangle();
         //Triangle();
         //CalculateFunction();
+    }
+
+    static void Alphabet()
+    {
+        Console.WriteLine("Displays the Alphabet");
+
+        for(char c = 'A'; c < 'Z'; c++)
+        {
+            Console.Write("{0} ", c);
+        }
     }
 
     static void MathStatistics()
