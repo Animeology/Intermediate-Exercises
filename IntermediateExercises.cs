@@ -2,7 +2,8 @@
 {
     static void Main(string[] args)
     {
-        HexadecimalTable();
+        ReverseArray();
+        //HexadecimalTable();
         //BinaryHexadecimal();
         //PrimeFactors();
         //Pyramid();
@@ -25,22 +26,42 @@
         //CalculateFunction();
     }
 
+    static void ReverseArray()
+    {
+        Console.WriteLine("Input 5 numbers and it will print it in reverse array");
+
+        int max = 5;
+        int[] nums = new int[max];
+
+        for (int i = 0; i < max; i++)
+        {
+            nums[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        Array.Reverse(nums);
+
+        for(int i = 0; i < max; i++)
+        {
+            Console.Write("{0} ", nums[i]);
+        }
+    }
+
     static void HexadecimalTable()
     {
         Console.WriteLine("Prints a hexadecimal table");
 
         int max = 255;
 
-        for(int i = 0; i <= max; i++)
+        for (int i = 0; i <= max; i++)
         {
-            if(i < 16)
+            if (i < 16)
             {
                 Console.Write("0");
             }
 
             Console.Write("{0} ", Convert.ToString(i, 16));
 
-            if(i % 16 == 15)
+            if (i % 16 == 15)
             {
                 Console.WriteLine();
             }
@@ -59,7 +80,7 @@
             string binary = Convert.ToString(num, 2);
             string hexadecimal = Convert.ToString(num, 16);
 
-            if(num != 0)
+            if (num != 0)
             {
                 Console.WriteLine("Binary: " + binary);
                 Console.WriteLine("Hexadecimal: " + hexadecimal);
@@ -74,9 +95,9 @@
         int num = Convert.ToInt32(Console.ReadLine());
         int divisor = 2;
 
-        while(num > 1)
+        while (num > 1)
         {
-            while(num % divisor == 0)
+            while (num % divisor == 0)
             {
                 Console.Write(divisor + "x");
                 num = num / divisor;
@@ -97,14 +118,14 @@
 
         Console.WriteLine();
 
-        if(word.Length % 2 == 0)
+        if (word.Length % 2 == 0)
         {
             word += " ";
         }
 
-        for(int i = 0; i < height; i++)
+        for (int i = 0; i < height; i++)
         {
-            for(int j = 0; j < position; j++)
+            for (int j = 0; j < position; j++)
             {
                 Console.Write(" ");
             }
@@ -125,14 +146,14 @@
 
         for (int i = 0; i < height; i++)
         {
-            for(int j = 0; j < width; j++)
+            for (int j = 0; j < width; j++)
             {
                 Console.Write(symbol);
             }
 
             Console.WriteLine();
 
-            for(int k = 0; k <= i ; k++)
+            for (int k = 0; k <= i; k++)
             {
                 Console.Write(" ");
             }
