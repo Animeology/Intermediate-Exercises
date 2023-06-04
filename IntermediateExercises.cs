@@ -2,7 +2,8 @@
 {
     static void Main(string[] args)
     {
-        HollowRectangle();
+        Parallelogram();
+        //HollowRectangle();
         //HollowSquare();
         //NestedConditionalOp();
         //ConditionalOp();
@@ -20,9 +21,32 @@
         //CalculateFunction();
     }
 
+    static void Parallelogram()
+    {
+        Console.WriteLine("Input the width, height, and symbol to display a parallelogram");
+        int width = Convert.ToInt32(Console.ReadLine());
+        int height = Convert.ToInt32(Console.ReadLine());
+        char symbol = Convert.ToChar(Console.ReadLine()!);
+
+        for (int i = 0; i < height; i++)
+        {
+            for(int j = 0; j < width; j++)
+            {
+                Console.Write(symbol);
+            }
+
+            Console.WriteLine();
+
+            for(int k = 0; k <= i ; k++)
+            {
+                Console.Write(" ");
+            }
+        }
+    }
+
     static void HollowRectangle()
     {
-        Console.WriteLine("Input a symbol and the width/height to display a hollow square");
+        Console.WriteLine("Input a symbol and the width/height to display a hollow rectangle");
 
         char symbol = Convert.ToChar(Console.ReadLine()!);
         int width = Convert.ToInt32(Console.ReadLine());
@@ -39,7 +63,7 @@
         {
             Console.Write(symbol);
 
-            for(int j = 0; j < width - 2; j++)
+            for (int j = 0; j < width - 2; j++)
             {
                 Console.Write(" ");
             }
@@ -256,7 +280,6 @@
 
         int num1;
         int num2;
-
 
         do
         {
