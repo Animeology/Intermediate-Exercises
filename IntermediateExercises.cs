@@ -2,7 +2,8 @@
 {
     static void Main(string[] args)
     {
-        NestedConditionalOp();
+        HollowSquare();
+        //NestedConditionalOp();
         //ConditionalOp();
         //MoneyChange();
         //Alphabet();
@@ -16,6 +17,40 @@
         //NETriangle();
         //Triangle();
         //CalculateFunction();
+    }
+
+    static void HollowSquare()
+    {
+        Console.WriteLine("Input a symbol and the width/height to display a hollow square");
+
+        char symbol = Convert.ToChar(Console.ReadLine()!);
+        int size = Convert.ToInt32(Console.ReadLine());
+
+        for(int i = 0; i < size; i++)
+        {
+            Console.Write(symbol);
+        }
+
+        Console.WriteLine();
+
+        for(int i = 0; i < size - 2; i++) 
+        {
+            Console.Write(symbol);
+
+            for(int j = 0; j < size - 2; j++)
+            {
+                Console.Write(" ");
+            }
+
+            Console.WriteLine(symbol);
+        }
+
+        for(int i = 0; i < size; i++)
+        {
+            Console.Write(symbol);
+        }
+
+        Console.WriteLine();
     }
 
     static void NestedConditionalOp()
@@ -56,7 +91,7 @@
 
         int change = total - value;
 
-        while(change >= 50)
+        while (change >= 50)
         {
             Console.WriteLine("50 ");
             change -= 50;
@@ -98,7 +133,7 @@
     {
         Console.WriteLine("Displays the Alphabet");
 
-        for(char c = 'A'; c < 'Z'; c++)
+        for (char c = 'A'; c < 'Z'; c++)
         {
             Console.Write("{0} ", c);
         }
@@ -111,7 +146,7 @@
         int totalNums = 5;
         int[] nums = new int[totalNums];
 
-        for(int i = 0; i < totalNums; i++)
+        for (int i = 0; i < totalNums; i++)
         {
             nums[i] = int.Parse(Console.ReadLine()!);
         }
@@ -120,7 +155,7 @@
         int max = int.MinValue;
         int min = int.MaxValue;
 
-        for(int i = 0; i < totalNums; i++)
+        for (int i = 0; i < totalNums; i++)
         {
             sum += nums[i];
 
@@ -135,7 +170,7 @@
             }
 
         }
-       
+
         int mean = sum / totalNums;
 
         Console.WriteLine("Sum: {0}", sum);
@@ -152,7 +187,7 @@
         int y = Convert.ToInt32(Console.ReadLine());
 
         // For Loop
-        for(int i = x; i <= y; i++)
+        for (int i = x; i <= y; i++)
         {
             Console.Write("{0} ", i);
         }
@@ -161,7 +196,7 @@
 
         // While loop
         int loop = x;
-        while(loop <= y)
+        while (loop <= y)
         {
             Console.Write("{0} ", loop);
             loop++;
@@ -236,7 +271,7 @@
             }
             attempts++;
 
-            if(attempts == 3)
+            if (attempts == 3)
             {
                 Console.WriteLine("You used all your attempts!");
             }
