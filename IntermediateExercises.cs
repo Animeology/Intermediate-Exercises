@@ -2,7 +2,8 @@
 {
     static void Main(string[] args)
     {
-        SearchArray();
+        SearchEvenNums();
+        //SearchArray();
         //ReverseArray();
         //HexadecimalTable();
         //BinaryHexadecimal();
@@ -27,6 +28,29 @@
         //CalculateFunction();
     }
 
+    static void SearchEvenNums()
+    {
+        Console.WriteLine("Input 10 numbers and it will display only the even numbers");
+
+        int count = 10;
+        int[] arr = new int[count];
+
+        for (int i = 0; i < count; i++)
+        {
+            arr[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        Console.WriteLine("Even Numbers:");
+
+        for (int i = 0; i < count; i++)
+        {
+            if (arr[i] % 2 == 0)
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
+    }
+
     static void SearchArray()
     {
         Console.WriteLine("Input 5 numbers and input the number to search through the array");
@@ -38,7 +62,7 @@
         {
             arr[i] = Convert.ToInt32(Console.ReadLine());
         }
-        
+
         Console.WriteLine("What number do you want to search?");
         int y = Convert.ToInt32(Console.ReadLine());
 
