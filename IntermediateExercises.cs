@@ -2,7 +2,8 @@
 {
     static void Main(string[] args)
     {
-        TwoDeeCharArray();
+        ArrayStruct();
+        //TwoDeeCharArray();
         //TwoDeeArrays();
         //BubbleSort();
         //SearchPosAndNeg();
@@ -32,6 +33,47 @@
         //CalculateFunction();
     }
 
+    public struct Car
+    {
+        public string model;
+        public int year;
+
+        public void SetCar()
+        {
+            model = Console.ReadLine()!;
+            year = Convert.ToInt32(Console.ReadLine());
+        }
+    }
+
+    static void ArrayStruct()
+    {
+        Console.WriteLine("Input 3 car models and the year of production for each and it will display them in order of production");
+
+        int totalCars = 3;
+        Car[] cars = new Car[totalCars];
+
+        for(int i = 0; i < totalCars; i++)
+        {
+            cars[i].SetCar();
+        }
+
+        for(int i = 0; i < totalCars - 2; i++)
+        {
+            Car temp;
+            if (cars[i].year > cars[i + 1].year)
+            {
+                temp = cars[i];
+                cars[i] = cars[i + 1];
+                cars[i + 1] = temp;
+            }
+        }
+
+        for(int i = 0; i < totalCars; i++)
+        {
+            Console.WriteLine("Model: {0}, Year of production: {1}", cars[i].model, cars[i].year);
+        }
+    }
+
     static void TwoDeeCharArray()
     {
         Console.WriteLine("Draws a 20(row) by 70(col) of 'X'");
@@ -40,11 +82,11 @@
         int cols = 70;
         char x = 'X';
 
-        char[,] arr = new char[rows, cols];        
+        char[,] arr = new char[rows, cols];
 
-        for(int i = 0; i < rows; i++)
+        for (int i = 0; i < rows; i++)
         {
-            for(int j = 0; j < cols; j++)
+            for (int j = 0; j < cols; j++)
             {
                 arr[i, j] = x;
                 Console.Write(arr[i, j]);
@@ -60,16 +102,16 @@
         int groupBy = 5;
         int[,] allGrades = new int[groupBy, groupBy];
 
-        for(int i = 0; i < 2; i++)
+        for (int i = 0; i < 2; i++)
         {
-            for(int j = 0; j < groupBy; j++)
+            for (int j = 0; j < groupBy; j++)
             {
                 allGrades[i, j] = Convert.ToInt32(Console.ReadLine());
             }
         }
 
         int group1Total = 0;
-        for(int i = 0; i < groupBy; i++)
+        for (int i = 0; i < groupBy; i++)
         {
             group1Total += allGrades[0, i];
         }
@@ -90,15 +132,15 @@
         int count = 10;
         int[] nums = new int[count];
 
-        for(int i = 0; i < count; i++)
+        for (int i = 0; i < count; i++)
         {
             nums[i] = Convert.ToInt32(Console.ReadLine());
         }
 
         int temp;
-        for(int i =  0; i <= nums.Length - 2; i++) 
+        for (int i = 0; i <= nums.Length - 2; i++)
         {
-            for(int j = 0; j <= nums.Length - 2; j++)
+            for (int j = 0; j <= nums.Length - 2; j++)
             {
                 if (nums[j] > nums[j + 1])
                 {
