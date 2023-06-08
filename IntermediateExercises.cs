@@ -5,7 +5,8 @@ class IntermediateExercises
 {
     static void Main(string[] args)
     {
-        ModifyCharacter();
+        Add();
+        //ModifyCharacter();
         //Circumference();
         //MathematicalStatistics();
         //ArrayStruct();
@@ -37,6 +38,27 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();
+    }
+
+    static void Add()
+    {
+        Console.WriteLine("Input a number and it will add of them");
+
+        string text = Console.ReadLine()!;
+
+        Console.WriteLine(AddDigits(text));
+
+        int AddDigits(string text)
+        {
+            int sum = 0;
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                sum += Convert.ToInt32(text.Substring(i, 1));
+            }
+
+            return sum;
+        }
     }
 
     static void ModifyCharacter()
