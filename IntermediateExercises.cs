@@ -5,7 +5,8 @@ class IntermediateExercises
 {
     static void Main(string[] args)
     {
-        PowerOperation();
+        Title();
+        //PowerOperation();
         //GreatestValue();
         //ReverseString();
         //Add();
@@ -43,6 +44,50 @@ class IntermediateExercises
         //CalculateFunction();
     }
 
+    static void Title()
+    {
+        Console.WriteLine("Input a string and it will print it like a title");
+
+        string text = Console.ReadLine()!;
+
+        WriteTitle(text);
+
+        void WriteTitle(string text)
+        {
+            text = text.ToUpper();
+
+            for (int i = 0; i < text.Length * 2 - 1; i++)
+            {
+                Console.Write('-');
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < text.Length * 2 - 1; i++)
+            {
+                Console.Write(' ');
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                Console.Write(text[i] + " ");
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < text.Length * 2 - 1; i++)
+            {
+                Console.Write(' ');
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < text.Length * 2 - 1; i++)
+            {
+                Console.Write('-');
+            }
+            Console.WriteLine();
+        }
+    }
+
     static void PowerOperation()
     {
         Console.WriteLine("Input 2 numbers and the it will calculate the first number of the power of the second number");
@@ -67,7 +112,7 @@ class IntermediateExercises
         int count = 5;
         int[] arr = new int[count];
 
-        for(int  i = 0; i < count; i++)
+        for (int i = 0; i < count; i++)
         {
             arr[i] = Convert.ToInt32(Console.ReadLine());
         }
@@ -77,7 +122,7 @@ class IntermediateExercises
         int SearchGreatestValue(int[] arr)
         {
             int max = int.MinValue;
-            for(int i = 0; i < count; i++)
+            for (int i = 0; i < count; i++)
             {
                 if (arr[i] > max)
                 {
@@ -151,7 +196,7 @@ class IntermediateExercises
         double x = 0;
         double y = 0;
 
-        for(int i = 0; i < 360; i++)
+        for (int i = 0; i < 360; i++)
         {
             double radians = i * Math.PI / 180.0;
 
