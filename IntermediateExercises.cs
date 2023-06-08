@@ -2,7 +2,8 @@
 {
     static void Main(string[] args)
     {
-        MathematicalStatistics();
+        Circumference();
+        //MathematicalStatistics();
         //ArrayStruct();
         //TwoDeeCharArray();
         //TwoDeeArrays();
@@ -32,6 +33,28 @@
         //NETriangle();
         //Triangle();
         //CalculateFunction();
+    }
+
+    static void Circumference()
+    {
+        Console.WriteLine("Draw the circumference of a oval");
+
+        double x = 0;
+        double y = 0;
+
+        for(int i = 0; i < 360; i++)
+        {
+            double radians = i * Math.PI / 180.0;
+
+            x = 30 + 8 * Math.Cos(radians);
+            y = 10 + 8 * Math.Sin(radians);
+
+            Console.SetCursorPosition((int)x, (int)y);
+            Console.Write("X");
+        }
+
+        Console.SetCursorPosition(1, 20);
+
     }
 
     static void MathematicalStatistics()
