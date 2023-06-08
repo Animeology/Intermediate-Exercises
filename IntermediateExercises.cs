@@ -1,8 +1,12 @@
-﻿class IntermediateExercises
+﻿using static System.Net.Mime.MediaTypeNames;
+using System.Diagnostics.Metrics;
+
+class IntermediateExercises
 {
     static void Main(string[] args)
     {
-        Circumference();
+        ModifyCharacter();
+        //Circumference();
         //MathematicalStatistics();
         //ArrayStruct();
         //TwoDeeCharArray();
@@ -39,22 +43,18 @@
     {
         Console.WriteLine("Input a text, position of the lettter you want to change and input a new character");
 
-        void ChangeLetter(string text, int position, char letter)
+        string text = Console.ReadLine()!;
+        int position = Convert.ToInt32(Console.ReadLine());
+        char letter = Convert.ToChar(Console.Read());
+
+        Console.WriteLine(ChangeLetter(text, position, letter));
+
+        string ChangeLetter(string text, int position, char letter)
         {
-            text = Console.ReadLine()!;
-            position = Convert.ToInt32(Console.ReadLine());
-            letter = Convert.ToChar(Console.Read());
+            text = text.Remove(position, 1);
+            text = text.Insert(position, letter.ToString());
 
-            while(position < text.Length)
-            {
-                for (int i = 0; i < text.Length; i++)
-                {
-                    if(i == position)
-                    {
-
-                    }
-                }
-            }
+            return text;
         }
     }
 
