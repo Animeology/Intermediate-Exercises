@@ -35,6 +35,29 @@
         //CalculateFunction();
     }
 
+    static void ModifyCharacter()
+    {
+        Console.WriteLine("Input a text, position of the lettter you want to change and input a new character");
+
+        void ChangeLetter(string text, int position, char letter)
+        {
+            text = Console.ReadLine()!;
+            position = Convert.ToInt32(Console.ReadLine());
+            letter = Convert.ToChar(Console.Read());
+
+            while(position < text.Length)
+            {
+                for (int i = 0; i < text.Length; i++)
+                {
+                    if(i == position)
+                    {
+
+                    }
+                }
+            }
+        }
+    }
+
     static void Circumference()
     {
         Console.WriteLine("Draw the circumference of a oval");
@@ -46,7 +69,7 @@
         {
             double radians = i * Math.PI / 180.0;
 
-            x = 30 + 8 * Math.Cos(radians);
+            x = 35 + 8 * Math.Cos(radians);
             y = 10 + 8 * Math.Sin(radians);
 
             Console.SetCursorPosition((int)x, (int)y);
