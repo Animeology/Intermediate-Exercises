@@ -5,7 +5,8 @@ class IntermediateExercises
 {
     static void Main(string[] args)
     {
-        Title();
+        SpaceFunction();
+        //Title();
         //PowerOperation();
         //GreatestValue();
         //ReverseString();
@@ -42,6 +43,30 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();
+    }
+
+    static void SpaceFunction()
+    {
+        Console.WriteLine("Input a sentence and it will count the total spaces in the sentence");
+
+        string text = Console.ReadLine()!;
+
+        Console.WriteLine(CountSpaces(text));
+
+        int CountSpaces(string text)
+        {
+            int count = 0;
+
+            for(int i = 0; i < text.Length; i++)
+            {
+                if (text[i] == ' ')
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        }
     }
 
     static void Title()
