@@ -5,7 +5,8 @@ class IntermediateExercises
 {
     static void Main(string[] args)
     {
-        FormatText();
+        AddArray();
+        //FormatText();
         //SpaceFunction();
         //Title();
         //PowerOperation();
@@ -46,6 +47,33 @@ class IntermediateExercises
         //CalculateFunction();
     }
 
+    static void AddArray()
+    {
+        Console.WriteLine("Insert 5 numbers to add and it will add them together in the same array");
+
+        int count = 5;
+        int[] arr = new int[count];
+
+        for (int i = 0; i < count; i++)
+        {
+            arr[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        Add(arr);
+
+        void Add(int[] arr)
+        {
+            int total = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                total += arr[i];
+            }
+
+            Console.WriteLine(total);
+        }
+    }
+
     static void FormatText()
     {
         Console.WriteLine("Input a word and it will in the center and underlined");
@@ -69,7 +97,7 @@ class IntermediateExercises
                 Console.SetCursorPosition((int)x + i, (int)y + 1);
                 Console.Write('-');
             }
-            Console.WriteLine() ;
+            Console.WriteLine();
         }
     }
 
