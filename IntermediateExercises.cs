@@ -5,7 +5,8 @@ class IntermediateExercises
 {
     static void Main(string[] args)
     {
-        SpaceFunction();
+        FormatText();
+        //SpaceFunction();
         //Title();
         //PowerOperation();
         //GreatestValue();
@@ -45,6 +46,33 @@ class IntermediateExercises
         //CalculateFunction();
     }
 
+    static void FormatText()
+    {
+        Console.WriteLine("Input a word and it will in the center and underlined");
+
+        string text = Console.ReadLine()!;
+
+        WriteCenteredUnderline(text);
+
+        void WriteCenteredUnderline(string text)
+        {
+            double x = 35;
+            double y = 5;
+
+            Console.SetCursorPosition((int)x, (int)y);
+            Console.Write(text);
+
+            Console.WriteLine();
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                Console.SetCursorPosition((int)x + i, (int)y + 1);
+                Console.Write('-');
+            }
+            Console.WriteLine() ;
+        }
+    }
+
     static void SpaceFunction()
     {
         Console.WriteLine("Input a sentence and it will count the total spaces in the sentence");
@@ -57,7 +85,7 @@ class IntermediateExercises
         {
             int count = 0;
 
-            for(int i = 0; i < text.Length; i++)
+            for (int i = 0; i < text.Length; i++)
             {
                 if (text[i] == ' ')
                 {
