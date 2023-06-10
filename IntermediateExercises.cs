@@ -1,7 +1,4 @@
-﻿using static System.Net.Mime.MediaTypeNames;
-using System.Diagnostics.Metrics;
-
-class IntermediateExercises
+﻿class IntermediateExercises
 {
     static void Main(string[] args)
     {
