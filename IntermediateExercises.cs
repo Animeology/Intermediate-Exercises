@@ -62,7 +62,7 @@
         int max = int.MinValue;
         int min = int.MaxValue;
 
-        for(int i = 0; i < count; i++)
+        for (int i = 0; i < count; i++)
         {
             arr[i] = Convert.ToInt32(Console.ReadLine());
         }
@@ -71,7 +71,7 @@
 
         void FindMinMax(int[] arr, int max, int min)
         {
-            for(int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
                 if (arr[i] > max)
                 {
@@ -96,7 +96,7 @@
         char op = Convert.ToChar(args[1]);
         int y = Convert.ToInt32(args[2]);
 
-        if(args.Length != 0)
+        if (args.Length != 0)
         {
             return 1;
         }
@@ -111,7 +111,7 @@
             Convert.ToInt32(x);
             Convert.ToInt32(y);
         }
-        catch 
+        catch
         {
             return 3;
         }
