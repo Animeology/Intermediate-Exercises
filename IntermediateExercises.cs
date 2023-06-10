@@ -2,7 +2,8 @@
 {
     static void Main(string[] args)
     {
-        CheckAlphabet();
+        CheckNumber();
+        //CheckAlphabet();
         //SwapParameters();
         //CalculateRefDouble();
         //CalculateDouble();
@@ -47,6 +48,28 @@
         //Triangle();
         //CalculateFunction();
     }
+
+    static void CheckNumber()
+    {
+        Console.WriteLine("Input a string to check if the whole string is only alphabetic");
+
+        string text = Console.ReadLine()!;
+
+        Console.WriteLine(IsNumber(text));
+
+        bool IsNumber(string text)
+        {
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] < '1' || text[i] > '9')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
 
     static void CheckAlphabet()
     {
