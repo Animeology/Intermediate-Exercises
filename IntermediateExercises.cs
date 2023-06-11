@@ -1,10 +1,9 @@
-﻿using System.Xml.Linq;
-
-class IntermediateExercises
+﻿class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        StudentTeacherTest();
+        PhotoBookTest();
+        //StudentTeacherTest();
         //PersonNameConAndDes();
         //PersonName();
         //Palindrome();
@@ -56,6 +55,47 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();        
+    }
+
+    static void PhotoBookTest()
+    {
+        PhotoBook album1 = new PhotoBook();
+        Console.WriteLine(album1.GetNumberPages());
+
+        PhotoBook album2 = new PhotoBook(24);
+        Console.WriteLine(album2.GetNumberPages());
+
+        BigPhotoBook album3 = new BigPhotoBook();
+        Console.WriteLine(album3.GetNumberPages());
+    }
+
+    public class PhotoBook
+    {
+        protected int numPages;
+
+        public PhotoBook()
+        {
+            numPages = 16;
+        }
+
+        public PhotoBook(int pages)
+        {
+            numPages = pages;
+            // this.numPages = pages also works
+        }
+
+        public int GetNumberPages()
+        {
+            return numPages;
+        }
+    }
+
+    public class BigPhotoBook : PhotoBook 
+    {
+        public BigPhotoBook()
+        {
+            numPages = 64;
+        }
     }
 
     static void StudentTeacherTest()
@@ -165,7 +205,7 @@ class IntermediateExercises
 
         for (int i = 0; i < count; i++)
         {
-            persons[i] = new Person(Console.ReadLine()!);        
+            persons[i] = new Person(Console.ReadLine()!);
         }
 
         for (int i = 0; i < count; i++)
