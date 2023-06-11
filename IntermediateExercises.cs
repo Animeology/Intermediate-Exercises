@@ -1,8 +1,11 @@
-﻿class IntermediateExercises
+﻿using System.Xml.Linq;
+
+class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        PersonName();
+        PersonNameConAndDes();
+        //PersonName();
         //Palindrome();
         //MaxMinArray();
         //MainParameterCalculatorReturn(args);
@@ -54,6 +57,46 @@
         //CalculateFunction();        
     }
 
+    static void PersonNameConAndDes()
+    {
+        Console.WriteLine("Input 3 names and it will store in the array and displays it");
+
+        int count = 3;
+
+        PersonConAndDes[] persons = new PersonConAndDes[count];
+
+        for (int i = 0; i < count; i++)
+        {
+            persons[i] = new PersonConAndDes(Console.ReadLine()!);
+        }
+
+        for (int i = 0; i < count; i++)
+        {
+            Console.WriteLine(persons[i].ToString());
+        }
+
+    }
+
+    public class PersonConAndDes
+    {
+        public string m_name { get; set; }
+
+        public PersonConAndDes(string name)
+        {
+            m_name = name;
+        }
+
+        public override string ToString()
+        {
+            return "Hello!, My name is " + m_name;
+        }
+        ~PersonConAndDes()
+        {
+            m_name = string.Empty;
+        }
+    }
+
+
     static void PersonName()
     {
         Console.WriteLine("Input 3 names and it will store in the array and displays it");
@@ -87,6 +130,7 @@
             return "Hello!, My name is " + name;
         }
     }
+
     static void Palindrome()
     {
         Console.WriteLine("Input a string and it will check if it is a palindrome");
