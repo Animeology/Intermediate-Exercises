@@ -2,7 +2,8 @@
 {
     public static void Main(string[] args)
     {
-        PhotoBookTest();
+        InheritanceObjects();
+        //PhotoBookTest();
         //StudentTeacherTest();
         //PersonNameConAndDes();
         //PersonName();
@@ -55,6 +56,40 @@
         //NETriangle();
         //Triangle();
         //CalculateFunction();        
+    }
+
+    static void InheritanceObjects()
+    {
+        Console.WriteLine("Input 3 names and it will store in the array and displays it");
+
+        int count = 3;
+
+        Person[] persons = new Person[count];
+
+        for (int i = 0; i < count; i++)
+        {
+            if (i == 0)
+            {
+                persons[i] = new Teacher(Console.ReadLine()!);
+            }
+            else
+            {
+                persons[i] = new Student(Console.ReadLine()!);
+            }
+
+        }
+
+        for (int i = 0; i < count; i++)
+        {
+            if(i == 0)
+            {
+                ((Teacher)persons[i]).Explain();
+            }
+            else
+            {
+                ((Student)persons[i]).Study();
+            }
+        }
     }
 
     static void PhotoBookTest()
@@ -150,6 +185,7 @@
     {
         public Student(string name) : base(name)
         {
+            m_name = name;
         }
 
         public void Study()
@@ -167,6 +203,7 @@
     {
         public Teacher(string name) : base(name)
         {
+            m_name = name;
         }
 
         public void Explain()
@@ -212,7 +249,6 @@
         {
             Console.WriteLine(persons[i].ToString());
         }
-
     }
 
     static void Palindrome()
