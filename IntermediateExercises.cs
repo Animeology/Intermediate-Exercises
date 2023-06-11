@@ -2,7 +2,8 @@
 {
     public static void Main(string[] args)
     {
-        Palindrome();
+        PersonName();
+        //Palindrome();
         //MaxMinArray();
         //MainParameterCalculatorReturn(args);
         //MainParameterCalculator(args);
@@ -53,6 +54,39 @@
         //CalculateFunction();        
     }
 
+    static void PersonName()
+    {
+        Console.WriteLine("Input 3 names and it will store in the array and displays it");
+
+        int count = 3;
+
+        Person[] persons = new Person[count];
+
+        for (int i = 0; i < count; i++)
+        {
+            persons[i] = new Person()
+            {
+                name = Console.ReadLine()!
+            };
+
+        }
+
+        for (int i = 0; i < count; i++)
+        {
+            Console.WriteLine(persons[i].ToString());
+        }
+
+    }
+
+    public class Person
+    {
+        public string name { get; set; }
+
+        public override string ToString()
+        {
+            return "Hello!, My name is " + name;
+        }
+    }
     static void Palindrome()
     {
         Console.WriteLine("Input a string and it will check if it is a palindrome");
@@ -64,11 +98,11 @@
 
         bool IsPalindrome(string text)
         {
-            for(int i = text.Length - 1; i >= 0; i--)
+            for (int i = text.Length - 1; i >= 0; i--)
             {
                 reverse += text[i];
             }
-            if(text == reverse)
+            if (text == reverse)
             {
                 return true;
             }
