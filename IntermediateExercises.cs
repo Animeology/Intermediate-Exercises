@@ -4,7 +4,8 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        PersonNameConAndDes();
+        StudentTeacherTest();
+        //PersonNameConAndDes();
         //PersonName();
         //Palindrome();
         //MaxMinArray();
@@ -57,31 +58,29 @@ class IntermediateExercises
         //CalculateFunction();        
     }
 
-    static void PersonNameConAndDes()
+    static void StudentTeacherTest()
     {
-        Console.WriteLine("Input 3 names and it will store in the array and displays it");
+        Person person = new Person("Joseph");
+        person.Greet();
 
-        int count = 3;
+        Student student = new Student("Joseph");
+        student.SetAge(25);
+        student.Greet();
+        student.ShowAge();
+        student.Study();
 
-        PersonConAndDes[] persons = new PersonConAndDes[count];
-
-        for (int i = 0; i < count; i++)
-        {
-            persons[i] = new PersonConAndDes(Console.ReadLine()!);
-        }
-
-        for (int i = 0; i < count; i++)
-        {
-            Console.WriteLine(persons[i].ToString());
-        }
-
+        Teacher teacher = new Teacher("Tanner");
+        teacher.SetAge(40);
+        teacher.Greet();
+        teacher.Explain();
     }
 
-    public class PersonConAndDes
+    public class Person
     {
         public string m_name { get; set; }
+        public int m_age { get; set; }
 
-        public PersonConAndDes(string name)
+        public Person(string name)
         {
             m_name = name;
         }
@@ -90,12 +89,71 @@ class IntermediateExercises
         {
             return "Hello!, My name is " + m_name;
         }
-        ~PersonConAndDes()
+
+        ~Person()
         {
             m_name = string.Empty;
         }
+
+        public void Greet()
+        {
+            Console.WriteLine("Hello!");
+        }
+
+        public void SetAge(int age)
+        {
+            m_age = age;
+        }
     }
 
+    public class Student : Person
+    {
+        public Student(string name) : base(name)
+        {
+        }
+
+        public void Study()
+        {
+            Console.WriteLine("I'm studying");
+        }
+
+        public void ShowAge()
+        {
+            Console.WriteLine("My age is: {0} years old", m_age);
+        }
+    }
+
+    public class Teacher : Person
+    {
+        public Teacher(string name) : base(name)
+        {
+        }
+
+        public void Explain()
+        {
+            Console.WriteLine("I'm explaining");
+        }
+    }
+
+    static void PersonNameConAndDes()
+    {
+        Console.WriteLine("Input 3 names and it will store in the array and displays it");
+
+        int count = 3;
+
+        Person[] persons = new Person[count];
+
+        for (int i = 0; i < count; i++)
+        {
+            persons[i] = new Person(Console.ReadLine()!);
+        }
+
+        for (int i = 0; i < count; i++)
+        {
+            Console.WriteLine(persons[i].ToString());
+        }
+
+    }
 
     static void PersonName()
     {
@@ -107,11 +165,7 @@ class IntermediateExercises
 
         for (int i = 0; i < count; i++)
         {
-            persons[i] = new Person()
-            {
-                name = Console.ReadLine()!
-            };
-
+            persons[i] = new Person(Console.ReadLine()!);        
         }
 
         for (int i = 0; i < count; i++)
@@ -119,16 +173,6 @@ class IntermediateExercises
             Console.WriteLine(persons[i].ToString());
         }
 
-    }
-
-    public class Person
-    {
-        public string name { get; set; }
-
-        public override string ToString()
-        {
-            return "Hello!, My name is " + name;
-        }
     }
 
     static void Palindrome()
