@@ -1,8 +1,10 @@
-﻿class IntermediateExercises
+﻿using System.Data.Common;
+
+class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        InheritanceObjects();
+        //InheritanceObjects();
         //PhotoBookTest();
         //StudentTeacherTest();
         //PersonNameConAndDes();
@@ -56,6 +58,43 @@
         //NETriangle();
         //Triangle();
         //CalculateFunction();        
+    }
+
+    public class Location
+    {
+        double x;
+        double y;
+    }
+
+    public class Shape : Location
+    {
+        protected Location location;
+
+        public override string ToString()
+        {
+            return string.Empty;
+        }
+
+        public double Area()
+        {
+            return 0.0;
+        }
+
+        public double Perimeter()
+        {
+            return 0.0;
+        }
+    }
+
+    public class Rectangle
+    {
+        protected double side1;
+        protected double side2;
+    }
+
+    public class Circle
+    {
+        protected double radius;
     }
 
     static void InheritanceObjects()
