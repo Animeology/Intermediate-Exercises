@@ -4,7 +4,8 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        CarDriving();
+        AnimalEating();
+        //CarDriving();
         //InheritanceObjects();
         //PhotoBookTest();
         //StudentTeacherTest();
@@ -59,6 +60,38 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();        
+    }
+
+    static void AnimalEating()
+    {
+        Dog dog = new Dog();
+        string name = Console.ReadLine()!;
+        dog.SetName(name);
+        Console.WriteLine(dog.GetName());
+        dog.Eat();
+    }
+
+    public class Dog : Animal
+    {
+        public override void Eat()
+        {
+            Console.WriteLine("Eating");
+        }
+    }
+
+    public abstract class Animal
+    {
+        string m_name = string.Empty;
+        
+        public void SetName(string name)
+        {
+            m_name = name;
+        }
+        public string GetName()
+        {
+            return m_name;
+        }
+        public abstract void Eat();
     }
 
     static void CarDriving()
