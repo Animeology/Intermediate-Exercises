@@ -4,7 +4,8 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        PowerRecursion();
+        FibonacciRecursion();
+        //PowerRecursion();
         //MultiplyRecursion();
         //AnimalEating();
         //CarDriving();
@@ -62,6 +63,26 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();        
+    }
+
+    static void FibonacciRecursion()
+    {
+        Console.WriteLine("A Fibonacci that starts with the user input");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine(Fibonacci(num));
+
+        int Fibonacci(int num)
+        {
+            if(num == 1 || num == 2)
+            {
+                return 1;
+            }
+            else
+            {
+                return Fibonacci(num - 1) + Fibonacci(num - 2);
+            }
+        }
     }
 
     static void PowerRecursion()
