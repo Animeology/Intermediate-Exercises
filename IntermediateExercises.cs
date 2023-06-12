@@ -4,6 +4,7 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
+        CarDriving();
         //InheritanceObjects();
         //PhotoBookTest();
         //StudentTeacherTest();
@@ -60,6 +61,54 @@ class IntermediateExercises
         //CalculateFunction();        
     }
 
+    static void CarDriving()
+    {
+        Car2 car = new Car2(0);
+
+        Console.WriteLine("Put how much gasoline you want to put into the car");
+        int gasoline = Convert.ToInt32(Console.ReadLine());
+        // int gasoline = int.Parse(Console.ReadLine()) also works
+
+        if(car.Refuel(gasoline))
+        {
+            car.Drive();
+        }        
+    }
+
+    public class Car2 : IVehicle
+    {
+        public int Gasoline { get; set; }
+
+        public Car2(int gasoline)
+        {
+            Gasoline = gasoline;
+        }
+
+        public void Drive()
+        {
+            if (Gasoline > 0)
+            {
+                Console.WriteLine("Driving");
+            }
+            else
+            {
+                Console.WriteLine("Ran out of gasoline");
+            }
+        }
+
+        public bool Refuel(int gasoline)
+        {
+            Gasoline += gasoline;
+            return true;
+        }
+    }
+
+    public interface IVehicle
+    {
+        void Drive();
+        bool Refuel(int gasoline);
+    }
+
     public class Location
     {
         double x;
@@ -86,13 +135,13 @@ class IntermediateExercises
         }
     }
 
-    public class Rectangle
+    public class Rectangle : Shape
     {
         protected double side1;
         protected double side2;
     }
 
-    public class Circle
+    public class Circle : Shape
     {
         protected double radius;
     }
