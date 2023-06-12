@@ -4,7 +4,8 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        MultiplyRecursion();
+        PowerRecursion();
+        //MultiplyRecursion();
         //AnimalEating();
         //CarDriving();
         //InheritanceObjects();
@@ -61,6 +62,28 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();        
+    }
+
+    static void PowerRecursion()
+    {
+        Console.WriteLine("Input two numbers and it will do the power of the number using recursion");
+
+        int num = Convert.ToInt32(Console.ReadLine());
+        int power = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine(Power(num, power));
+
+        int Power(int num, int power)
+        {
+            if(power == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return num * Power(num, power - 1);
+            }
+        }
     }
 
     static void MultiplyRecursion()
