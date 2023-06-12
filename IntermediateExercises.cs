@@ -4,7 +4,8 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        AnimalEating();
+        MultiplyRecursion();
+        //AnimalEating();
         //CarDriving();
         //InheritanceObjects();
         //PhotoBookTest();
@@ -60,6 +61,27 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();        
+    }
+
+    static void MultiplyRecursion()
+    {
+        Console.WriteLine("Input 2 numbers and it will multiply it by recursion");
+        int x = Convert.ToInt32(Console.ReadLine());
+        int y = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine(Multiply(x, y));
+        
+        int Multiply(int x, int y)
+        {
+            if (y == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return x + Multiply(x, y - 1);
+            }
+        }
     }
 
     static void AnimalEating()
