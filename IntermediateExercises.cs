@@ -4,7 +4,8 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        FactorialRecursion();
+        ReverseRecursion();
+        //FactorialRecursion();
         //FibonacciRecursion();
         //PowerRecursion();
         //MultiplyRecursion();
@@ -64,6 +65,28 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();        
+    }
+
+    static void ReverseRecursion()
+    {
+        Console.WriteLine("Input a string and it will be reverse by recursion");
+        string text = Console.ReadLine()!;
+
+        Console.WriteLine(Reverse(text));
+
+        string Reverse(string text)
+        {
+            if(text.Length <= 1)
+            {
+                return text;
+            }
+            else
+            {
+                char firstLetter = text[0];
+                string restOfWord = text.Substring(1);
+                return Reverse(restOfWord) + firstLetter;
+            }
+        }
     }
 
     static void FactorialRecursion()
