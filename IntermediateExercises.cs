@@ -67,6 +67,7 @@ class IntermediateExercises
         //Triangle();
         //CalculateFunction();
     }
+
     static void PalindromeRecursion()
     {
         Console.WriteLine("Input a string and it will check if it is a palindrome by recursion");
