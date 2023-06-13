@@ -4,7 +4,8 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        FibonacciRecursion();
+        FactorialRecursion();
+        //FibonacciRecursion();
         //PowerRecursion();
         //MultiplyRecursion();
         //AnimalEating();
@@ -63,6 +64,26 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();        
+    }
+
+    static void FactorialRecursion()
+    {
+        Console.WriteLine("A Factorial that starts with the user input");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine(Factorial(num));
+
+        int Factorial(int num)
+        {
+            if(num == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return num * Factorial(num - 1);
+            }
+        }
     }
 
     static void FibonacciRecursion()
