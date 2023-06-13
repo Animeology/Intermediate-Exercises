@@ -4,7 +4,8 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        ReverseRecursion();
+        //PalindromeRecursion();
+        //ReverseRecursion();
         //FactorialRecursion();
         //FibonacciRecursion();
         //PowerRecursion();
@@ -64,7 +65,33 @@ class IntermediateExercises
         //RightAlignTriangle();
         //NETriangle();
         //Triangle();
-        //CalculateFunction();        
+        //CalculateFunction();
+    }
+    static void PalindromeRecursion()
+    {
+        Console.WriteLine("Input a string and it will check if it is a palindrome by recursion");
+        string text = Console.ReadLine()!;
+
+        Console.WriteLine(Palindrome(text));
+
+        bool Palindrome(string text)
+        {
+            if (text.Length <= 1)
+            {
+                return true;
+            }
+            else
+            {
+                if (text[0] != text[text.Length - 1])
+                {
+                    return false;
+                }
+                else
+                {
+                    return Palindrome(text.Substring(1, text.Length - 2));
+                }
+            }
+        }
     }
 
     static void ReverseRecursion()
