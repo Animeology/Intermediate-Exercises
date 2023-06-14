@@ -4,7 +4,8 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        CountWordsInFile();
+        ChangeLowerToUpperFile();
+        //CountWordsInFile();
         //SearchLinesInFile();
         //PalindromeRecursion();
         //ReverseRecursion();
@@ -68,6 +69,27 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();
+    }
+
+    static void ChangeLowerToUpperFile()
+    {
+        Console.WriteLine("Creates a new file that uppercase every word in the input.txt file");
+        string file = "input.txt";
+        string newFile = "output.txt";
+
+        using (StreamReader sr = new StreamReader(file))
+        {
+            using (StreamWriter sw = new StreamWriter(newFile))
+            {
+                string line;
+                while ((line = sr.ReadLine()!) != null)
+                {
+                    string upperLines = line.ToUpper();
+
+                    sw.WriteLine(upperLines);
+                }
+            }
+        }
     }
 
     static void CountWordsInFile()
