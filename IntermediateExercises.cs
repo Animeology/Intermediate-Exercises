@@ -4,7 +4,8 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        SearchLinesInFile();
+        CountWordsInFile();
+        //SearchLinesInFile();
         //PalindromeRecursion();
         //ReverseRecursion();
         //FactorialRecursion();
@@ -67,6 +68,30 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();
+    }
+
+    static void CountWordsInFile()
+    {
+        Console.WriteLine("Tt will count the number of words in the input.txt file");
+        string file = "input.txt";
+        int count = 0;
+
+        using (StreamReader sr = new StreamReader(file))
+        {
+            string line;
+            do
+            {
+                line = sr.ReadLine()!;
+
+                if (line != null)
+                {
+                    count += line.Split(' ').Length;
+                }
+            } while (line != null);
+        }
+
+
+        Console.WriteLine(count);
     }
 
     static void SearchLinesInFile()
@@ -133,7 +158,7 @@ class IntermediateExercises
 
         string Reverse(string text)
         {
-            if(text.Length <= 1)
+            if (text.Length <= 1)
             {
                 return text;
             }
@@ -155,7 +180,7 @@ class IntermediateExercises
 
         int Factorial(int num)
         {
-            if(num == 0)
+            if (num == 0)
             {
                 return 1;
             }
@@ -175,7 +200,7 @@ class IntermediateExercises
 
         int Fibonacci(int num)
         {
-            if(num == 1 || num == 2)
+            if (num == 1 || num == 2)
             {
                 return 1;
             }
@@ -197,7 +222,7 @@ class IntermediateExercises
 
         int Power(int num, int power)
         {
-            if(power == 0)
+            if (power == 0)
             {
                 return 1;
             }
@@ -213,9 +238,9 @@ class IntermediateExercises
         Console.WriteLine("Input 2 numbers and it will multiply it by recursion");
         int x = Convert.ToInt32(Console.ReadLine());
         int y = Convert.ToInt32(Console.ReadLine());
-        
+
         Console.WriteLine(Multiply(x, y));
-        
+
         int Multiply(int x, int y)
         {
             if (y == 0)
@@ -249,7 +274,7 @@ class IntermediateExercises
     public abstract class Animal
     {
         string m_name = string.Empty;
-        
+
         public void SetName(string name)
         {
             m_name = name;
@@ -269,10 +294,10 @@ class IntermediateExercises
         int gasoline = Convert.ToInt32(Console.ReadLine());
         // int gasoline = int.Parse(Console.ReadLine()) also works
 
-        if(car.Refuel(gasoline))
+        if (car.Refuel(gasoline))
         {
             car.Drive();
-        }        
+        }
     }
 
     public class Car2 : IVehicle
@@ -369,7 +394,7 @@ class IntermediateExercises
 
         for (int i = 0; i < count; i++)
         {
-            if(i == 0)
+            if (i == 0)
             {
                 ((Teacher)persons[i]).Explain();
             }
@@ -413,7 +438,7 @@ class IntermediateExercises
         }
     }
 
-    public class BigPhotoBook : PhotoBook 
+    public class BigPhotoBook : PhotoBook
     {
         public BigPhotoBook()
         {
