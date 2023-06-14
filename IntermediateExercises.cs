@@ -1,6 +1,4 @@
-﻿using System.Data.Common;
-
-class IntermediateExercises
+﻿class IntermediateExercises
 {
     public static void Main(string[] args)
     {
@@ -91,7 +89,6 @@ class IntermediateExercises
             }
         }
     }
-
 
     static void ChangeLowerToUpperFile()
     {
