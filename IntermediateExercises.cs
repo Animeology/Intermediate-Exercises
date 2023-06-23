@@ -5,7 +5,8 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        BMPImage();
+        ReadBMP();
+        //BMPImage();
         //ReadID3();
         //ReverseFile();
         //ChangeLowerToUpperFile();
@@ -73,6 +74,21 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();
+    }
+
+    static void ReadBMP()
+    {
+        string fileName = "logo.bmp";
+
+        using (FileStream file = File.Open(fileName, FileMode.Open, FileAccess.ReadWrite))
+        {
+            char b1 = (char)file.ReadByte();
+            char b2 = (char)file.ReadByte();
+
+            file.Seek(0, SeekOrigin.Begin);
+            file.WriteByte(Convert.ToByte('B'));
+            file.WriteByte(Convert.ToByte('M'));
+        }
     }
 
     static void BMPImage()
