@@ -1,10 +1,13 @@
 ﻿using System.Text;
+using System.Data.SQLite;
+using System.Data;
 
 class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        InvertedFile();
+        ReadingListFromDB();
+        //InvertedFile();
         //ReadBMP();
         //BMPImage();
         //ReadID3();
@@ -74,6 +77,48 @@ class IntermediateExercises
         //NETriangle();
         //Triangle();
         //CalculateFunction();
+    }
+
+    public class PersonDB
+    {
+        public string? Name { get; set; }
+        public int Age { get; set; }
+    }
+
+    static void ReadingListFromDB()
+    {
+        string dbFileName = "persons.sqlite";
+        List<PersonDB> persons = new List<PersonDB>();
+
+        using (SQLiteConnection connection = new SQLiteConnection(
+            "Data Source=" + dbFileName + ";Version=3;"
+        ))
+        {
+            connection.Open();
+
+            using (SQLiteCommand command = connection.CreateCommand())
+            {
+                command.CommandText = "select name, age from \"person\"";
+                command.CommandType = CommandType.Text;
+
+                SQLiteDataReader reader = command.ExecuteReader();
+                while(reader.Read())
+                {
+                    persons.Add(new PersonDB()
+                    {
+                        Name = reader["name"].ToString()!,
+                        Age = int.Parse(reader["age"].ToString()!)
+                    }
+                    );
+                }
+            }
+        }    
+
+        foreach(var person in persons)
+        {
+            Console.WriteLine(person.Name);
+            Console.WriteLine(person.Age);
+        }
     }
 
     static void InvertedFile()
