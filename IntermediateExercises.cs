@@ -6,22 +6,26 @@ class IntermediateExercises
 {
     public static void Main(string[] args)
     {
-        CreateDatabase();
+        //CreateDatabase();
         //ReadingListFromDB();
+
         //InvertedFile();
         //ReadBMP();
         //BMPImage();
         //ReadID3();
+
         //ReverseFile();
         //ChangeLowerToUpperFile();
         //CountWordsInFile();
         //SearchLinesInFile();
+
         //PalindromeRecursion();
         //ReverseRecursion();
         //FactorialRecursion();
         //FibonacciRecursion();
         //PowerRecursion();
         //MultiplyRecursion();
+
         //AnimalEating();
         //CarDriving();
         //InheritanceObjects();
@@ -29,24 +33,28 @@ class IntermediateExercises
         //StudentTeacherTest();
         //PersonNameConAndDes();
         //PersonName();
+
         //Palindrome();
         //MaxMinArray();
         //MainParameterCalculatorReturn(args);
         //MainParameterCalculator(args);
         //CheckNumber();
         //CheckAlphabet();
+
         //SwapParameters();
         //CalculateRefDouble();
         //CalculateDouble();
         //AddArray();
         //FormatText();
         //SpaceFunction();
+
         //Title();
         //PowerOperation();
         //GreatestValue();
         //ReverseString();
         //Add();
         //ModifyCharacter();
+
         //Circumference();
         //MathematicalStatistics();
         //ArrayStruct();
@@ -57,27 +65,32 @@ class IntermediateExercises
         //SearchEvenNums();
         //SearchArray();
         //ReverseArray();
+
         //HexadecimalTable();
         //BinaryHexadecimal();
         //PrimeFactors();
+
         //Pyramid();
         //Parallelogram();
         //HollowRectangle();
         //HollowSquare();
+
         //NestedConditionalOp();
         //ConditionalOp();
         //MoneyChange();
         //Alphabet();
+
         //MathStatistics();
+
         //RepetitiveStructures();
         //InfiniteDivide();
         //AccessControl();
         //MultipleThreesAndFives();
+
         //GraphicFunction();
         //RightAlignTriangle();
         //NETriangle();
         //Triangle();
-        //CalculateFunction();
     }
 
     static void CreateDatabase()
@@ -90,7 +103,7 @@ class IntermediateExercises
         }
 
         using (SQLiteConnection connection = new SQLiteConnection(
-            "Data Source=" + dbFileName + ";Version=3;"    
+            "Data Source=" + dbFileName + ";Version=3;"
         ))
         {
             connection.Open();
@@ -132,7 +145,7 @@ class IntermediateExercises
                 command.CommandType = CommandType.Text;
 
                 SQLiteDataReader reader = command.ExecuteReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     persons.Add(new PersonDB()
                     {
@@ -142,9 +155,9 @@ class IntermediateExercises
                     );
                 }
             }
-        }    
+        }
 
-        foreach(var person in persons)
+        foreach (var person in persons)
         {
             Console.WriteLine(person.Name);
             Console.WriteLine(person.Age);
@@ -156,7 +169,7 @@ class IntermediateExercises
         string inputFileName = "app.exe";
         string outputFileName = "app.inv";
 
-        using(FileStream file = File.OpenRead(inputFileName))
+        using (FileStream file = File.OpenRead(inputFileName))
         {
             long size = file.Length;
             byte[] data = new byte[size];
@@ -165,7 +178,7 @@ class IntermediateExercises
 
             using (FileStream outFile = File.OpenWrite(outputFileName))
             {
-                for(long i = 0; i < size; i++)
+                for (long i = 0; i < size; i++)
                 {
                     outFile.WriteByte(data[i]);
                 }
@@ -205,9 +218,9 @@ class IntermediateExercises
                 + (data[20] * 256 * 256)
                 + (data[21] * 256 * 256 * 256);
 
-        height = data[22] 
-                + (data[23] * 256) 
-                + (data[24] * 256 * 256) 
+        height = data[22]
+                + (data[23] * 256)
+                + (data[24] * 256 * 256)
                 + (data[25] * 256 * 256 * 256);
 
 
@@ -2170,18 +2183,4 @@ class IntermediateExercises
         }
     }
 
-    static void CalculateFunction()
-    {
-        Console.WriteLine("Input two numbers for a range to calculate the following: y = x^2 - 2x + 1");
-
-        int x = Convert.ToInt32(Console.ReadLine());
-        int y = Convert.ToInt32(Console.ReadLine());
-
-        for (int i = x; i <= y; i++)
-        {
-            double function = Math.Pow(i, 2) - (2 * i) + 1;
-
-            Console.Write("{0} ", function);
-        }
-    }
 }
