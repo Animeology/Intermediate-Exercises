@@ -2,7 +2,7 @@
 {
     public class Arithmetic
     {
-        static void CalculateFunction()
+        public static void CalculateFunction()
         {
             Console.WriteLine("Input two numbers for a range to calculate the following: y = x^2 - 2x + 1");
 
