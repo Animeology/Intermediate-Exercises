@@ -2,7 +2,7 @@
 {
     public class TextFilesA
     {
-        public static void SearchLinesInFile()
+        public void SearchLinesInFile()
         {
             Console.WriteLine("Search for the word in the file and it will print out the line that the word is in");
             string file = "input.txt";

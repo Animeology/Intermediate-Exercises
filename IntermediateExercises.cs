@@ -102,5 +102,9 @@ class IntermediateExercises
         sqLite.CreateDatabase();
         sqLite.ReadingListFromDB();
 
+        TextFilesA textFilesA = new TextFilesA();
+        textFilesA.SearchLinesInFile();
+
+
     }
 }
