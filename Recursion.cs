@@ -2,7 +2,7 @@
 {
     public class Recursion
     {
-        public static void PalindromeRecursion()
+        public void PalindromeRecursion()
         {
             Console.WriteLine("Input a string and it will check if it is a palindrome by recursion");
             string text = Console.ReadLine()!;
@@ -29,7 +29,7 @@
             }
         }
 
-        public static void ReverseRecursion()
+        public void ReverseRecursion()
         {
             Console.WriteLine("Input a string and it will be reverse by recursion");
             string text = Console.ReadLine()!;
@@ -51,7 +51,7 @@
             }
         }
 
-        public static void FactorialRecursion()
+        public void FactorialRecursion()
         {
             Console.WriteLine("A Factorial that starts with the user input");
             int num = Convert.ToInt32(Console.ReadLine());
@@ -71,7 +71,7 @@
             }
         }
 
-        public static void FibonacciRecursion()
+        public void FibonacciRecursion()
         {
             Console.WriteLine("A Fibonacci that starts with the user input");
             int num = Convert.ToInt32(Console.ReadLine());
@@ -91,7 +91,7 @@
             }
         }
 
-        public static void PowerRecursion()
+        public void PowerRecursion()
         {
             Console.WriteLine("Input two numbers and it will do the power of the number using recursion");
 
@@ -113,7 +113,7 @@
             }
         }
 
-        public static void MultiplyRecursion()
+        public void MultiplyRecursion()
         {
             Console.WriteLine("Input 2 numbers and it will multiply it by recursion");
             int x = Convert.ToInt32(Console.ReadLine());

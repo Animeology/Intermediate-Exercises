@@ -89,5 +89,13 @@ class IntermediateExercises
         objectP.StudentTeacherTest();
         objectP.PersonNameConAndDes();
         objectP.PersonName();
+
+        Recursion recursion = new Recursion();
+        recursion.PalindromeRecursion();
+        recursion.ReverseRecursion();
+        recursion.FactorialRecursion();
+        recursion.FibonacciRecursion();
+        recursion.PowerRecursion();
+        recursion.MultiplyRecursion();
     }
 }
