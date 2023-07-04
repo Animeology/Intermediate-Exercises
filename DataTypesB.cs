@@ -24,7 +24,7 @@
             }
         }
 
-        public static void BinaryHexadecimal()
+        public void BinaryHexadecimal()
         {
             Console.WriteLine("Input a number and it will convert it to binary and hexadecimal");
 
@@ -44,7 +44,7 @@
             } while (num != 0);
         }
 
-        public static void PrimeFactors()
+        public void PrimeFactors()
         {
             Console.WriteLine("Input a integer and it will display the product of its prime factor");
 
@@ -62,7 +62,5 @@
             }
             Console.WriteLine(1);
         }
-
-
     }
 }
