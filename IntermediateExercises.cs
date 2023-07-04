@@ -32,5 +32,11 @@ class IntermediateExercises
 
         FlowControlsA flowControlsA = new FlowControlsA();
         flowControlsA.MathStatistics();
+
+        FlowControlsB flowControlsB = new FlowControlsB();
+        flowControlsB.RepetitiveStructures();
+        flowControlsB.InfiniteDivide();
+        flowControlsB.AccessControl();
+        flowControlsB.MultipleThreesAndFives();
     }
 }

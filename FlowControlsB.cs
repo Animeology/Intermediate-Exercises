@@ -2,7 +2,7 @@
 {
     public class FlowControlsB
     {
-        public static void RepetitiveStructures()
+        public void RepetitiveStructures()
         {
             Console.WriteLine("Input two numbers and it will show the range between these two numbers included the two inputs");
 
@@ -36,7 +36,7 @@
             } while (j <= y);
         }
 
-        public static void InfiniteDivide()
+        public void InfiniteDivide()
         {
             Console.WriteLine("Input two numbers and it would keep dividing until the first input is 0");
 
@@ -69,7 +69,7 @@
             } while (num1 != 0);
         }
 
-        public static void AccessControl()
+        public void AccessControl()
         {
             Console.WriteLine("Try to login with the username and password");
 
@@ -100,7 +100,7 @@
             }
         }
 
-        public static void MultipleThreesAndFives()
+        public void MultipleThreesAndFives()
         {
             Console.WriteLine("Prints out numbers ranged from 1 to 500 that are multiples of 3 and 5");
 
