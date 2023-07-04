@@ -290,7 +290,6 @@
             {
                 Console.WriteLine(persons[i].ToString());
             }
-
         }
 
         public void PersonName()
