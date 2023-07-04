@@ -52,5 +52,13 @@ class IntermediateExercises
         functionsA.AddArray();
         functionsA.FormatText();
         functionsA.SpaceFunction();
+
+        FunctionsB functionsB = new FunctionsB();
+        functionsB.Title();
+        functionsB.PowerOperation();
+        functionsB.GreatestValue();
+        functionsB.ReverseString();
+        functionsB.Add();
+        functionsB.ModifyCharacter();
     }
 }

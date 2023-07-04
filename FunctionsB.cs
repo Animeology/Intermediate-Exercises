@@ -2,7 +2,7 @@
 {
     public class FunctionsB
     {
-        public static void Title()
+        public void Title()
         {
             Console.WriteLine("Input a string and it will print it like a title");
 
@@ -46,7 +46,7 @@
             }
         }
 
-        public static void PowerOperation()
+        public void PowerOperation()
         {
             Console.WriteLine("Input 2 numbers and the it will calculate the first number of the power of the second number");
 
@@ -63,7 +63,7 @@
             }
         }
 
-        public static void GreatestValue()
+        public void GreatestValue()
         {
             Console.WriteLine("Request 5 numbers and it will display the highest number");
 
@@ -91,7 +91,7 @@
             }
         }
 
-        public static void ReverseString()
+        public void ReverseString()
         {
             Console.WriteLine("Input a text and it will be reverse");
 
@@ -107,7 +107,7 @@
             }
         }
 
-        public static void Add()
+        public void Add()
         {
             Console.WriteLine("Input a number and it will add of them");
 
@@ -128,7 +128,7 @@
             }
         }
 
-        public static void ModifyCharacter()
+        public void ModifyCharacter()
         {
             Console.WriteLine("Input a text, position of the lettter you want to change and input a new character");
 
