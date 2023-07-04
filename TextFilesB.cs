@@ -2,7 +2,7 @@
 {
     public class TextFilesB
     {
-        public static void ReverseFile()
+        public void ReverseFile()
         {
             Console.WriteLine("Creates a new file that reverse every word in the input.txt file");
             string file = "input.txt";
@@ -22,7 +22,7 @@
             }
         }
 
-        public static void ChangeLowerToUpperFile()
+        public void ChangeLowerToUpperFile()
         {
             Console.WriteLine("Creates a new file that uppercase every word in the input.txt file");
             string file = "input.txt";
@@ -43,7 +43,7 @@
             }
         }
 
-        public static void CountWordsInFile()
+        public void CountWordsInFile()
         {
             Console.WriteLine("Tt will count the number of words in the input.txt file");
             string file = "input.txt";

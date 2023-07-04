@@ -105,6 +105,9 @@ class IntermediateExercises
         TextFilesA textFilesA = new TextFilesA();
         textFilesA.SearchLinesInFile();
 
-
+        TextFilesB textFilesB = new TextFilesB();
+        textFilesB.ReverseFile();
+        textFilesB.ChangeLowerToUpperFile();
+        textFilesB.CountWordsInFile();
     }
 }
