@@ -18,5 +18,11 @@ class IntermediateExercises
         arrays.SearchEvenNums();
         arrays.SearchArray();
         arrays.ReverseArray();
+
+        BinaryFiles binaryFiles = new BinaryFiles();
+        binaryFiles.InvertedFile();
+        binaryFiles.ReadBMP();
+        binaryFiles.BMPImage();
+        binaryFiles.ReadID3();
     }
 }
