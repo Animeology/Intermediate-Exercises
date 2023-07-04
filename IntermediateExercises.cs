@@ -38,5 +38,13 @@ class IntermediateExercises
         flowControlsB.InfiniteDivide();
         flowControlsB.AccessControl();
         flowControlsB.MultipleThreesAndFives();
+
+        FlowControlsC flowControlsC = new FlowControlsC();
+        flowControlsC.NestedConditionalOp();
+        flowControlsC.ConditionalOp();
+        flowControlsC.MoneyChange();
+        flowControlsC.Alphabet();
+
+
     }
 }

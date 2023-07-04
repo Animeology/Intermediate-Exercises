@@ -2,7 +2,7 @@
 {
     public class FlowControlsC
     {
-        public static void NestedConditionalOp()
+        public void NestedConditionalOp()
         {
             Console.WriteLine("Input two numbers and it will check how many of them are positive");
 
@@ -14,7 +14,7 @@
             Console.WriteLine(pos);
         }
 
-        public static void ConditionalOp()
+        public void ConditionalOp()
         {
             Console.WriteLine("Input two numbers and it will output whether they are positive");
 
@@ -28,10 +28,9 @@
             Console.WriteLine(num1Pos);
             Console.WriteLine(num2Pos);
             Console.WriteLine(bothPos);
-
         }
 
-        public static void MoneyChange()
+        public void MoneyChange()
         {
             Console.WriteLine("Request the total money in the cash register and the purchase value");
 
@@ -75,10 +74,9 @@
                 Console.WriteLine("1 ");
                 change -= 1;
             }
-
         }
 
-        public static void Alphabet()
+        public void Alphabet()
         {
             Console.WriteLine("Displays the Alphabet");
 
@@ -87,6 +85,5 @@
                 Console.Write("{0} ", c);
             }
         }
-
     }
 }
