@@ -2,7 +2,7 @@
 {
     public class Arrays
     {
-        public static void Circumference()
+        public void Circumference()
         {
             Console.WriteLine("Draw the circumference of a oval");
 
@@ -23,7 +23,7 @@
             Console.SetCursorPosition(1, 20);
         }
 
-        public static void MathematicalStatistics()
+        public void MathematicalStatistics()
         {
             int choice = 0;
             int total = 1000;
@@ -167,7 +167,7 @@
             }
         }
 
-        public static void ArrayStruct()
+        public void ArrayStruct()
         {
             Console.WriteLine("Input 3 car models and the year of production for each and it will display them in order of production");
 
@@ -196,7 +196,7 @@
             }
         }
 
-        public static void TwoDeeCharArray()
+        public void TwoDeeCharArray()
         {
             Console.WriteLine("Draws a 20(row) by 70(col) of 'X'");
 
@@ -217,7 +217,7 @@
             }
         }
 
-        public static void TwoDeeArrays()
+        public void TwoDeeArrays()
         {
             Console.WriteLine("Input 10 grades and it will split it into 2 groups of 5 and calculate the average of each group");
 
@@ -247,7 +247,7 @@
             Console.WriteLine("Average for group 2 is {0}", group2Total / groupBy);
         }
 
-        public static void BubbleSort()
+        public void BubbleSort()
         {
             Console.WriteLine("Input 10 numbers and it will order them using Bubble Sort");
 
@@ -280,7 +280,7 @@
 
         }
 
-        public static void SearchPosAndNeg()
+        public void SearchPosAndNeg()
         {
             Console.WriteLine("Input 10 numbers and it will display the mean for positive numbers and negative numbers");
 
@@ -326,7 +326,7 @@
             Console.WriteLine("Average numbers positive is {0}", meanPos);
         }
 
-        public static void SearchEvenNums()
+        public void SearchEvenNums()
         {
             Console.WriteLine("Input 10 numbers and it will display only the even numbers");
 
@@ -349,7 +349,7 @@
             }
         }
 
-        public static void SearchArray()
+        public void SearchArray()
         {
             Console.WriteLine("Input 5 numbers and input the number to search through the array");
 
@@ -379,7 +379,7 @@
             }
         }
 
-        public static void ReverseArray()
+        public void ReverseArray()
         {
             Console.WriteLine("Input 5 numbers and it will print it in reverse array");
 
