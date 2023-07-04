@@ -24,5 +24,10 @@ class IntermediateExercises
         binaryFiles.ReadBMP();
         binaryFiles.BMPImage();
         binaryFiles.ReadID3();
+
+        DataTypesB dataType = new DataTypesB();
+        dataType.HexadecimalTable();
+        dataType.BinaryHexadecimal();
+        dataType.PrimeFactors();
     }
 }
