@@ -2,7 +2,7 @@
 {
     public class FlowControlsA
     {
-        public static void MathStatistics()
+        public void MathStatistics()
         {
             Console.WriteLine("Input 5 numbers and it will calculate the sum, mean, the max, and the minimum number");
 

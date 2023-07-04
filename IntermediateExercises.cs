@@ -29,5 +29,8 @@ class IntermediateExercises
         dataType.HexadecimalTable();
         dataType.BinaryHexadecimal();
         dataType.PrimeFactors();
+
+        FlowControlsA flowControlsA = new FlowControlsA();
+        flowControlsA.MathStatistics();
     }
 }
