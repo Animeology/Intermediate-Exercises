@@ -4,7 +4,7 @@ namespace Intermediate_Exercises
 {
     public class BinaryFiles
     {
-        public static void InvertedFile()
+        public void InvertedFile()
         {
             string inputFileName = "app.exe";
             string outputFileName = "app.inv";
@@ -26,7 +26,7 @@ namespace Intermediate_Exercises
             }
         }
 
-        public static void ReadBMP()
+        public void ReadBMP()
         {
             string fileName = "logo.bmp";
 
@@ -41,7 +41,7 @@ namespace Intermediate_Exercises
             }
         }
 
-        public static void BMPImage()
+        public void BMPImage()
         {
             string fileName = "logo.bmp";
             int size = 54;
@@ -67,7 +67,7 @@ namespace Intermediate_Exercises
             Console.WriteLine("{0}x{1}", width, height);
         }
 
-        public static void ReadID3()
+        public void ReadID3()
         {
             byte idTagLength = 3;
             byte titleLength = 30;
