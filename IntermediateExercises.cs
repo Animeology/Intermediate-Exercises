@@ -68,5 +68,13 @@ class IntermediateExercises
         functionsC.MainParameterCalculator(args);
         functionsC.CheckNumber();
         functionsC.CheckAlphabet();
+
+        GeometryA geomA = new GeometryA();
+        geomA.GraphicFunction();
+        geomA.RightAlignTriangle();
+        geomA.NETriangle();
+        geomA.Triangle();
+
+
     }
 }

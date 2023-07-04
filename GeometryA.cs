@@ -2,7 +2,7 @@
 {
     public class GeometryA
     {
-        public static void GraphicFunction()
+        public void GraphicFunction()
         {
             Console.WriteLine("Input two numbers for a range to calculate the following: y = (x - 4)^2");
 
@@ -22,7 +22,7 @@
             }
         }
 
-        public static void RightAlignTriangle()
+        public void RightAlignTriangle()
         {
             Console.WriteLine("Input a string and it will make a right-aligned triangle");
 
@@ -38,7 +38,7 @@
             }
         }
 
-        public static void NETriangle()
+        public void NETriangle()
         {
             Console.WriteLine("Input the width to print a '*' NorthEast triangle");
 
@@ -63,7 +63,7 @@
             }
         }
 
-        public static void Triangle()
+        public void Triangle()
         {
             Console.WriteLine("Input the symbol and a width to print a triangle");
 
