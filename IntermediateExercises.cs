@@ -97,5 +97,10 @@ class IntermediateExercises
         recursion.FibonacciRecursion();
         recursion.PowerRecursion();
         recursion.MultiplyRecursion();
+
+        SQLIte sqLite = new SQLIte();
+        sqLite.CreateDatabase();
+        sqLite.ReadingListFromDB();
+
     }
 }

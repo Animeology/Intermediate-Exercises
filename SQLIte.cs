@@ -5,7 +5,7 @@ namespace Intermediate_Exercises
 {
     public class SQLIte
     {
-        public static void CreateDatabase()
+        public void CreateDatabase()
         {
             string dbFileName = "out.sqlite";
 
@@ -40,7 +40,7 @@ namespace Intermediate_Exercises
             public int Age { get; set; }
         }
 
-        public static void ReadingListFromDB()
+        public void ReadingListFromDB()
         {
             string dbFileName = "persons.sqlite";
             List<Person> persons = new List<Person>();
