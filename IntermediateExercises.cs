@@ -60,5 +60,13 @@ class IntermediateExercises
         functionsB.ReverseString();
         functionsB.Add();
         functionsB.ModifyCharacter();
+
+        FunctionsC functionsC = new FunctionsC();
+        functionsC.Palindrome();
+        functionsC.MaxMinArray();
+        functionsC.MainParameterCalculatorReturn(args);
+        functionsC.MainParameterCalculator(args);
+        functionsC.CheckNumber();
+        functionsC.CheckAlphabet();
     }
 }

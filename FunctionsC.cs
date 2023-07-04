@@ -2,7 +2,7 @@
 {
     public class FunctionsC
     {
-        public static void Palindrome()
+        public void Palindrome()
         {
             Console.WriteLine("Input a string and it will check if it is a palindrome");
 
@@ -28,7 +28,7 @@
             }
         }
 
-        public static void MaxMinArray()
+        public void MaxMinArray()
         {
             Console.WriteLine("Input 5 numbers into the array and it will find the max and min number in the array");
 
@@ -63,7 +63,7 @@
             }
         }
 
-        public static int MainParameterCalculatorReturn(string[] args)
+        public int MainParameterCalculatorReturn(string[] args)
         {
             Console.WriteLine("Input an equation and it will calculate");
             Console.WriteLine("Accepts only \"+\", \"-\", \"*\" \"x\" \"X\", \"/\" ");
@@ -116,7 +116,7 @@
             return 0;
         }
 
-        public static void MainParameterCalculator(string[] args)
+        public void MainParameterCalculator(string[] args)
         {
             Console.WriteLine("Input an equation and it will calculate");
             Console.WriteLine("Accepts only \"+\", \"-\", \"*\" \"x\" \"X\", \"/\" ");
@@ -147,7 +147,7 @@
             }
         }
 
-        public static void CheckNumber()
+        public void CheckNumber()
         {
             Console.WriteLine("Input a string to check if the whole string is only alphabetic");
 
@@ -168,7 +168,7 @@
             }
         }
 
-        public static void CheckAlphabet()
+        public void CheckAlphabet()
         {
             Console.WriteLine("Input a string to check if the whole string is only alphabetic");
 
