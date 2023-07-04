@@ -2,7 +2,7 @@
 {
     public class DataTypesB
     {
-        public static void HexadecimalTable()
+        public void HexadecimalTable()
         {
             Console.WriteLine("Prints a hexadecimal table");
 
