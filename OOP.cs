@@ -2,7 +2,7 @@
 {
     public class OOP
     {
-        public static void AnimalEating()
+        public void AnimalEating()
         {
             Dog dog = new Dog();
             string name = Console.ReadLine()!;
@@ -34,9 +34,9 @@
         }
 
 
-        public static void CarDriving()
+        public void CarDriving()
         {
-            Car2 car = new Car2(0);
+            Car car = new Car(0);
 
             Console.WriteLine("Put how much gasoline you want to put into the car");
             int gasoline = Convert.ToInt32(Console.ReadLine());
@@ -48,11 +48,11 @@
             }
         }
 
-        public class Car2 : IVehicle
+        public class Car : IVehicle
         {
             public int Gasoline { get; set; }
 
-            public Car2(int gasoline)
+            public Car(int gasoline)
             {
                 Gasoline = gasoline;
             }
@@ -119,7 +119,7 @@
             protected double radius;
         }
 
-        public static void InheritanceObjects()
+        public void InheritanceObjects()
         {
             Console.WriteLine("Input 3 names and it will store in the array and displays it");
 
@@ -153,7 +153,7 @@
             }
         }
 
-        public static void PhotoBookTest()
+        public void PhotoBookTest()
         {
             PhotoBook album1 = new PhotoBook();
             Console.WriteLine(album1.GetNumberPages());
@@ -194,7 +194,7 @@
             }
         }
 
-        public static void StudentTeacherTest()
+        public void StudentTeacherTest()
         {
             Person person = new Person("Joseph");
             person.Greet();
@@ -273,7 +273,7 @@
             }
         }
 
-        public static void PersonNameConAndDes()
+        public void PersonNameConAndDes()
         {
             Console.WriteLine("Input 3 names and it will store in the array and displays it");
 
@@ -293,7 +293,7 @@
 
         }
 
-        public static void PersonName()
+        public void PersonName()
         {
             Console.WriteLine("Input 3 names and it will store in the array and displays it");
 

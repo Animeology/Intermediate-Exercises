@@ -80,5 +80,14 @@ class IntermediateExercises
         geomB.Parallelogram();
         geomB.HollowRectangle();
         geomB.HollowSquare();
+
+        OOP objectP = new OOP();
+        objectP.AnimalEating();
+        objectP.CarDriving();
+        objectP.InheritanceObjects();
+        objectP.PhotoBookTest();
+        objectP.StudentTeacherTest();
+        objectP.PersonNameConAndDes();
+        objectP.PersonName();
     }
 }
