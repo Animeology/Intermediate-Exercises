@@ -45,6 +45,12 @@ class IntermediateExercises
         flowControlsC.MoneyChange();
         flowControlsC.Alphabet();
 
-
+        FunctionsA functionsA = new FunctionsA();
+        functionsA.SwapParameters();
+        functionsA.CalculateRefDouble();
+        functionsA.CalculateDouble();
+        functionsA.AddArray();
+        functionsA.FormatText();
+        functionsA.SpaceFunction();
     }
 }

@@ -2,7 +2,7 @@
 {
     public class FunctionsA
     {
-        public static void SwapParameters()
+        public void SwapParameters()
         {
             Console.WriteLine("Input two numbers and it will swap places.");
 
@@ -21,7 +21,7 @@
             }
         }
 
-        public static void CalculateRefDouble()
+        public void CalculateRefDouble()
         {
             Console.WriteLine("Input a number and it will print the number doubled");
 
@@ -38,7 +38,7 @@
 
         }
 
-        public static void CalculateDouble()
+        public void CalculateDouble()
         {
             Console.WriteLine("Input a number and it will print the number doubled");
 
@@ -54,7 +54,7 @@
             }
         }
 
-        public static void AddArray()
+        public void AddArray()
         {
             Console.WriteLine("Insert 5 numbers to add and it will add them together in the same array");
 
@@ -81,7 +81,7 @@
             }
         }
 
-        public static void FormatText()
+        public void FormatText()
         {
             Console.WriteLine("Input a word and it will in the center and underlined");
 
@@ -108,7 +108,7 @@
             }
         }
 
-        public static void SpaceFunction()
+        public void SpaceFunction()
         {
             Console.WriteLine("Input a sentence and it will count the total spaces in the sentence");
 
