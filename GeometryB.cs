@@ -2,7 +2,7 @@
 {
     public class GeometryB
     {
-        public static void Pyramid()
+        public void Pyramid()
         {
             Console.WriteLine("Input a string and it will make a triangle");
 
@@ -29,10 +29,9 @@
                 position--;
                 amount += 2;
             }
-
         }
 
-        public static void Parallelogram()
+        public void Parallelogram()
         {
             Console.WriteLine("Input the width, height, and symbol to display a parallelogram");
             int width = Convert.ToInt32(Console.ReadLine());
@@ -55,7 +54,7 @@
             }
         }
 
-        public static void HollowRectangle()
+        public void HollowRectangle()
         {
             Console.WriteLine("Input a symbol and the width/height to display a hollow rectangle");
 
@@ -88,10 +87,9 @@
             }
 
             Console.WriteLine();
-
         }
 
-        public static void HollowSquare()
+        public void HollowSquare()
         {
             Console.WriteLine("Input a symbol and the width/height to display a hollow square");
 
@@ -124,6 +122,5 @@
 
             Console.WriteLine();
         }
-
     }
 }

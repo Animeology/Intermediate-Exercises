@@ -75,6 +75,10 @@ class IntermediateExercises
         geomA.NETriangle();
         geomA.Triangle();
 
-
+        GeometryB geomB = new GeometryB();
+        geomB.Pyramid();
+        geomB.Parallelogram();
+        geomB.HollowRectangle();
+        geomB.HollowSquare();
     }
 }
