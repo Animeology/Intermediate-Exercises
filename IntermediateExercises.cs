@@ -98,9 +98,10 @@ class IntermediateExercises
         //recursion.PowerRecursion();
         //recursion.MultiplyRecursion();
 
-        //SQLIte sqLite = new SQLIte();
+        SQLIte sqLite = new SQLIte();
         //sqLite.CreateDatabase();
         //sqLite.ReadingListFromDB();
+        sqLite.CreateMemoryDatabase();
 
         //TextFilesA textFilesA = new TextFilesA();
         //textFilesA.SearchLinesInFile();

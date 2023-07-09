@@ -5,6 +5,32 @@ namespace Intermediate_Exercises
 {
     public class SQLIte
     {
+        public void CreateMemoryDatabase()
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(
+                    "Data Source=" + 
+                    ":memory:" + 
+                    ";Version=3;" + 
+                    "New=True"
+                )
+            )
+            {
+                connection.Open();
+
+                string personTableString = "create table person (name varchar(20), age int)";
+                using (SQLiteCommand command = new SQLiteCommand(personTableString, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+
+                string teacherTableString = "create table teacher (name varchar(20))";
+                using (SQLiteCommand command = new SQLiteCommand(teacherTableString, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
         public void CreateDatabase()
         {
             string dbFileName = "out.sqlite";
