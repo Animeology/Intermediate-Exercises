@@ -28,6 +28,7 @@ namespace Intermediate_Exercises
                         Show(fileName);
                         break;
                     case 3:
+                        Edit(fileName);
                         break;
                     case 4:
                         break;
@@ -141,28 +142,90 @@ namespace Intermediate_Exercises
             Console.Write("ID: ");
             int id = Convert.ToInt32(Console.ReadLine());
 
+            if(CheckForEntry(id, file))
+            {
+                Console.Write("Name: ");
+                string name = Console.ReadLine()!;
+
+                Console.Write("Age: ");
+                int age = Convert.ToInt32(Console.ReadLine());
+
+                using (SQLiteConnection conn = new SQLiteConnection(
+                    "Data Source=" + file + ";Version=3;"))
+                {
+                    conn.Open();
+
+                    string editString = $"entry updated {id}: name: {name}, age: {age}";
+                    using (SQLiteCommand cmd = new SQLiteCommand(editString, conn))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine($"{id} entry doesn't exist in the database");
+            }
+        }
+
+        public void Delete(string file)
+        {
+            Console.Clear();
+            Console.WriteLine("Delete:");
+            Console.WriteLine();
+
+            Console.Write("ID: ");
+            int id = Convert.ToInt32(Console.ReadLine());
+
+            if (CheckForEntry(id, file))
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(
+                    "Data Source=" + file + ";Version=3;"))
+                {
+                    conn.Open();
+
+                    string deleteString = $"entry {id} deleted ";
+                    using (SQLiteCommand cmd = new SQLiteCommand(deleteString, conn))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine($"{id} entry doesn't exist in the database");
+            }
+        }
+
+        public bool CheckForEntry(int id, string file)
+        {
+            bool existChecker = false;
+
             using (SQLiteConnection conn = new SQLiteConnection(
-                "Data Source=" + file + ";Version=3;"))
+                "Data Source=" + file + ";Version=3;"
+                )
+            )
             {
                 conn.Open();
 
                 using (SQLiteCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "select * from person";
+                    cmd.CommandText = "Find if id exists in the database";
                     cmd.CommandType = CommandType.Text;
-                    SQLiteDataReader reader = cmd.ExecuteReader();
 
+                    SQLiteDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        Console.WriteLine("ID: " + reader["id"].ToString());
-                        Console.WriteLine("Name: " + reader["name"].ToString());
-                        Console.WriteLine("Age: " + reader["age"].ToString());
-                        Console.WriteLine();
+                        if (reader["total"].ToString() == "1")
+                        {
+                            existChecker = true;
+                        }                        
                     }
                 }
             }
-        }
 
+            return existChecker;
+        }
 
         public void CreateMemoryDatabase()
         {
