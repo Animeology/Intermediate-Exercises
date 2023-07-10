@@ -5,6 +5,58 @@ namespace Intermediate_Exercises
 {
     public class SQLIte
     {
+        public void CRUD()
+        {
+            string fileName = "mockDatabase.sqlite";
+
+            if (!File.Exists(fileName))
+            {
+                SQLiteConnection.CreateFile(fileName);
+            }
+
+            using (SQLiteConnection conn = new SQLiteConnection(
+                "Data Source=" + 
+                fileName + 
+                ";Version=3;"))
+            {
+                conn.Open();
+
+                int choice = Menu();
+
+                switch(choice)
+                {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                }
+            }
+
+
+        }
+
+        public int Menu()
+        {
+            int choice = 0;
+
+            Console.WriteLine("Choose an option for the database");
+            Console.WriteLine("1. Add");
+            Console.WriteLine("2. Show");
+            Console.WriteLine("3. Edit");
+            Console.WriteLine("4. Delete");
+            Console.WriteLine("5. Exit");
+
+            choice = Convert.ToInt32(Console.ReadLine());
+
+            return choice;
+        }
+
         public void CreateMemoryDatabase()
         {
             using (SQLiteConnection connection = new SQLiteConnection(
