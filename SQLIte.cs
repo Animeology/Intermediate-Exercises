@@ -15,15 +15,11 @@ namespace Intermediate_Exercises
             }
 
             using (SQLiteConnection conn = new SQLiteConnection(
-                "Data Source=" + 
-                fileName + 
-                ";Version=3;"))
+                "Data Source=" + fileName + ";Version=3;"))
             {
-                conn.Open();
+                conn.Open();                
 
-                int choice = Menu();
-
-                switch(choice)
+                switch(Menu())
                 {
                     case 1:
                         break;
@@ -43,8 +39,6 @@ namespace Intermediate_Exercises
 
         public int Menu()
         {
-            int choice = 0;
-
             Console.WriteLine("Choose an option for the database");
             Console.WriteLine("1. Add");
             Console.WriteLine("2. Show");
@@ -52,9 +46,27 @@ namespace Intermediate_Exercises
             Console.WriteLine("4. Delete");
             Console.WriteLine("5. Exit");
 
-            choice = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Option: ");
+            int choice = Convert.ToInt32(Console.ReadLine());
 
             return choice;
+        }
+
+        public void Add(string file)
+        {
+            string NEWLINE = "\n";
+
+            using (SQLiteConnection conn = new SQLiteConnection(
+                "Data Source=" + file + ";Version=3;"))
+            {
+                conn.Open();
+
+                string sql =
+                    $"create table if not exists person {NEWLINE}" + 
+                    $"{{" {NEWLINE} + 
+                    ;
+                    
+            }
         }
 
         public void CreateMemoryDatabase()
