@@ -22,8 +22,10 @@ namespace Intermediate_Exercises
                 switch(Menu())
                 {
                     case 1:
+                        Add(fileName);
                         break;
                     case 2:
+                        Show(fileName);
                         break;
                     case 3:
                         break;
@@ -52,9 +54,10 @@ namespace Intermediate_Exercises
             return choice;
         }
 
-        public void Add(string file)
+        public void CreateTable(string file)
         {
             string NEWLINE = "\n";
+            string INDENT = "\t";
 
             using (SQLiteConnection conn = new SQLiteConnection(
                 "Data Source=" + file + ";Version=3;"))
@@ -62,12 +65,104 @@ namespace Intermediate_Exercises
                 conn.Open();
 
                 string sql =
-                    $"create table if not exists person {NEWLINE}" + 
-                    $"{{" {NEWLINE} + 
-                    ;
-                    
+                    $"create table if not exists person {NEWLINE}" +
+                    $"{{ {NEWLINE}" +
+                    $"{INDENT}int primary key autoincrement, {NEWLINE}" +
+                    $"{INDENT}name varchar(20), {NEWLINE}" +
+                    $"{INDENT}age int {NEWLINE}" +
+                    $"}} {NEWLINE}";
+
+                using (SQLiteCommand cmd = conn.CreateCommand())
+                {
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
+
+        public void Add(string file)
+        {
+            Console.Clear();
+            Console.WriteLine("Add:");
+            Console.WriteLine();
+
+            Console.Write("Name: ");
+            string name = Console.ReadLine()!;
+
+            Console.WriteLine("Age: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            using (SQLiteConnection conn = new SQLiteConnection(
+                "Data Source=" + file + ";Version=3;"))
+            {
+                conn.Open();
+
+                string addString = "insert into persons table (name, age) entry: {" + name + ", " + age + "}";
+                using (SQLiteCommand cmd = new SQLiteCommand(addString, conn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Show(string file)
+        {
+            Console.Clear();
+            Console.WriteLine("Show:");
+            Console.WriteLine();
+
+            using (SQLiteConnection conn = new SQLiteConnection(
+                "Data Source=" + file + ";Version=3;"))
+            {
+                conn.Open();
+
+                using (SQLiteCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "select * from person";
+                    cmd.CommandType = CommandType.Text;
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Console.WriteLine("ID: " + reader["id"].ToString());
+                        Console.WriteLine("Name: " + reader["name"].ToString());
+                        Console.WriteLine("Age: " + reader["age"].ToString());
+                        Console.WriteLine();
+                    }
+                }
+            }
+        }
+
+        public void Edit(string file)
+        {
+            Console.Clear();
+            Console.WriteLine("Edit:");
+            Console.WriteLine();
+
+            Console.Write("ID: ");
+            int id = Convert.ToInt32(Console.ReadLine());
+
+            using (SQLiteConnection conn = new SQLiteConnection(
+                "Data Source=" + file + ";Version=3;"))
+            {
+                conn.Open();
+
+                using (SQLiteCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = "select * from person";
+                    cmd.CommandType = CommandType.Text;
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Console.WriteLine("ID: " + reader["id"].ToString());
+                        Console.WriteLine("Name: " + reader["name"].ToString());
+                        Console.WriteLine("Age: " + reader["age"].ToString());
+                        Console.WriteLine();
+                    }
+                }
+            }
+        }
+
 
         public void CreateMemoryDatabase()
         {
