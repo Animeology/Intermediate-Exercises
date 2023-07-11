@@ -101,7 +101,8 @@ class IntermediateExercises
         SQLIte sqLite = new SQLIte();
         //sqLite.CreateDatabase();
         //sqLite.ReadingListFromDB();
-        sqLite.CreateMemoryDatabase();
+        //sqLite.CreateMemoryDatabase();
+        sqLite.CRUD();
 
         //TextFilesA textFilesA = new TextFilesA();
         //textFilesA.SearchLinesInFile();
