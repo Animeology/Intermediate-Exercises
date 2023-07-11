@@ -17,9 +17,10 @@ namespace Intermediate_Exercises
             using (SQLiteConnection conn = new SQLiteConnection(
                 "Data Source=" + fileName + ";Version=3;"))
             {
-                conn.Open();                
+                conn.Open();
 
-                switch(Menu())
+                do
+                switch (Menu())
                 {
                     case 1:
                         Add(fileName);
@@ -31,10 +32,11 @@ namespace Intermediate_Exercises
                         Edit(fileName);
                         break;
                     case 4:
+                        Delete(fileName);
                         break;
                     case 5:
                         break;
-                }
+                } while (Menu() != 5);
             }
 
 
@@ -142,7 +144,7 @@ namespace Intermediate_Exercises
             Console.Write("ID: ");
             int id = Convert.ToInt32(Console.ReadLine());
 
-            if(CheckForEntry(id, file))
+            if (CheckForEntry(id, file))
             {
                 Console.Write("Name: ");
                 string name = Console.ReadLine()!;
@@ -219,7 +221,7 @@ namespace Intermediate_Exercises
                         if (reader["total"].ToString() == "1")
                         {
                             existChecker = true;
-                        }                        
+                        }
                     }
                 }
             }
@@ -230,9 +232,9 @@ namespace Intermediate_Exercises
         public void CreateMemoryDatabase()
         {
             using (SQLiteConnection connection = new SQLiteConnection(
-                    "Data Source=" + 
-                    ":memory:" + 
-                    ";Version=3;" + 
+                    "Data Source=" +
+                    ":memory:" +
+                    ";Version=3;" +
                     "New=True"
                 )
             )
