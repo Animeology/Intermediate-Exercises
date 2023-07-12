@@ -1,13 +1,12 @@
-﻿using Intermediate_Exercises;
-
-namespace Intermediate_Exercises
+﻿namespace IntermediateExercises
 {
+    using Arithmetic;
+
     class IntermediateExercises
     {
         public static void Main(string[] args)
         {
-            //Arithmetic arithmetic = new Arithmetic();
-            //arithmetic.CalculateFunction();
+            FunctionCalculator.CalculateFunction();
 
             //Arrays arrays = new Arrays();
             //arrays.Circumference();
