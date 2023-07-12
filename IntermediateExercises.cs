@@ -1,6 +1,5 @@
 ﻿using Intermediate_Exercises;
 
-
 namespace Intermediate_Exercises
 {
     class IntermediateExercises
