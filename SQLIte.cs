@@ -38,8 +38,6 @@ namespace Intermediate_Exercises
                         break;
                 } while (Menu() != 5);
             }
-
-
         }
 
         public int Menu()
