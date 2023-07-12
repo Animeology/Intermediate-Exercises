@@ -1,8 +1,8 @@
-﻿namespace Intermediate_Exercises
+﻿namespace IntermediateExercises.Arithmetic
 {
-    public class Arithmetic
+    public class FunctionCalculator
     {
-        public void CalculateFunction()
+        public static void CalculateFunction()
         {
             Console.WriteLine("Input two numbers for a range to calculate the following: y = x^2 - 2x + 1");
 
@@ -11,7 +11,7 @@
 
             for (int i = x; i <= y; i++)
             {
-                double function = Math.Pow(i, 2) - (2 * i) + 1;
+                double function = Math.Pow(i, 2) - 2 * i + 1;
 
                 Console.Write("{0} ", function);
             }
