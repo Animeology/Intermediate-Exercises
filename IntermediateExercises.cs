@@ -12,6 +12,14 @@
 
             // Arrays
             ReverseArray.ReversingTheArray();
+            SearchArray.SearchCertainArray();
+            SearchEvenArray.SearchEvenNums();
+            SearchPostiveNegativeArray.SearchPosAndNeg();
+            BubbleSortArray.BubbleSort();
+            TwoDeeArray.TwoDeeArrays();
+            TwoDeeCharArray.DrawTwoDeeCharArray();
+            StructureArray.ArrayStruct();
+            MathStatisticsArray.MathematicalStatistics();
             Circumference.CalculateCircumference();
         }
     }
