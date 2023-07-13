@@ -3,6 +3,7 @@
     using Arithmetic;
     using Arrays;
     using BinaryFiles;
+    using DataTypesB;
 
     class IntermediateExercises
     {
@@ -28,6 +29,11 @@
             ReadBMPFile.ReadBMP();
             BMPImageFile.BMPImage();
             InvertedBinaryFile.InvertedFile();
+
+            // Data Types B
+            HexaTable.HexadecimalTable();
+            BinaryHexa.BinaryHexadecimal();
+            PrimeFactor.PrimeFactors();
         }
     }
 }
