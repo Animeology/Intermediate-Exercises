@@ -10,6 +10,7 @@
     using FunctionsA;
     using FunctionsB;
     using FunctionsC;
+    using GeometryA;
 
     class IntermediateExercises
     {
@@ -79,6 +80,12 @@
             MainFunctionCalculatorWithReturn.MainParameterCalculatorReturn(args);
             MaxToMinArray.MaxMinArray();
             PalindromeFunction.Palindrome();
+
+            // Geometry A
+            TriangleShape.Triangle();
+            NorthEastTriangle.NETriangle();
+            RightTriangle.RightAlignTriangle();
+            Graphics.GraphicFunction();
         }
     }
 }
