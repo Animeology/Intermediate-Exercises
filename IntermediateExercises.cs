@@ -5,6 +5,7 @@
     using BinaryFiles;
     using DataTypesB;
     using FlowControlsA;
+    using FlowControlsB;
 
     class IntermediateExercises
     {
@@ -38,6 +39,12 @@
 
             // Flow Controls A
             MathematicalStatistics.MathStatistics();
+
+            // Flow Controls B
+            RepeatingStructures.RepetitiveStructures();
+            InfiniteDivide.KeepOnDividing();
+            AccessControl.Login();
+            Multiples.MultipleThreesAndFives();
         }
     }
 }
