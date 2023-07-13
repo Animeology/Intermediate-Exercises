@@ -4,6 +4,7 @@
     using Arrays;
     using BinaryFiles;
     using DataTypesB;
+    using FlowControlsA;
 
     class IntermediateExercises
     {
@@ -34,6 +35,9 @@
             HexaTable.HexadecimalTable();
             BinaryHexa.BinaryHexadecimal();
             PrimeFactor.PrimeFactors();
+
+            // Flow Controls A
+            MathematicalStatistics.MathStatistics();
         }
     }
 }
