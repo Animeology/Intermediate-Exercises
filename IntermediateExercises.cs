@@ -8,6 +8,7 @@
     using FlowControlsB;
     using FlowControlsC;
     using FunctionsA;
+    using FunctionsB;
 
     class IntermediateExercises
     {
@@ -61,6 +62,14 @@
             CalculateUsingReference.CalculateRefDouble();
             SwapParameter.SwapParameters();
             AddingIndexInArray.AddArray();
+
+            // Functions B
+            ModifyCharacters.ModifyCharacter();
+            AddFunction.Add();
+            ReverseString.StringReverse();
+            SearchMaxValue.GreatestValue();
+            PowerOperation.PowerOp();
+            TitleFormat.Title();
         }
     }
 }
