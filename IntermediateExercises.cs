@@ -6,6 +6,7 @@
     using DataTypesB;
     using FlowControlsA;
     using FlowControlsB;
+    using FlowControlsC;
 
     class IntermediateExercises
     {
@@ -45,6 +46,12 @@
             InfiniteDivide.KeepOnDividing();
             AccessControl.Login();
             Multiples.MultipleThreesAndFives();
+
+            // Flow Controls C
+            WhileLoopForChange.MoneyChange();
+            Alphabet.DisplayAlphabet();
+            ConditionalOperation.ConditionalOp();
+            NestedConditional.NestedConditionalOp();
         }
     }
 }
