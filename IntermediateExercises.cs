@@ -9,6 +9,7 @@
     using FlowControlsC;
     using FunctionsA;
     using FunctionsB;
+    using FunctionsC;
 
     class IntermediateExercises
     {
@@ -70,6 +71,14 @@
             SearchMaxValue.GreatestValue();
             PowerOperation.PowerOp();
             TitleFormat.Title();
+
+            // Functions C
+            AlphabetChecker.CheckAlphabet();
+            NumberChecker.CheckNumber();
+            MainFunctionCalculator.MainParameterCalculator(args);
+            MainFunctionCalculatorWithReturn.MainParameterCalculatorReturn(args);
+            MaxToMinArray.MaxMinArray();
+            PalindromeFunction.Palindrome();
         }
     }
 }
