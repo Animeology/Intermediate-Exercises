@@ -1,8 +1,8 @@
-﻿namespace Intermediate_Exercises
+﻿namespace IntermediateExercises.FlowControlsA
 {
-    public class FlowControlsA
+    public class MathematicalStatistics
     {
-        public void MathStatistics()
+        public static void MathStatistics()
         {
             Console.WriteLine("Input 5 numbers and it will calculate the sum, mean, the max, and the minimum number");
 
@@ -41,6 +41,5 @@
             Console.WriteLine("Max: {0}", max);
             Console.WriteLine("Min: {0}", min);
         }
-
     }
 }
