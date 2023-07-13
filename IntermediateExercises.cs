@@ -11,6 +11,7 @@
     using FunctionsB;
     using FunctionsC;
     using GeometryA;
+    using GeometryB;
 
     class IntermediateExercises
     {
@@ -86,6 +87,12 @@
             NorthEastTriangle.NETriangle();
             RightTriangle.RightAlignTriangle();
             Graphics.GraphicFunction();
+
+            // Geometry B
+            HollowSquareShape.HollowSquare();
+            HollowRectShape.HollowRectangle();
+            ParallelogramShape.Parallelogram();
+            PyramidShape.Pyramid();
         }
     }
 }
