@@ -7,6 +7,7 @@
     using FlowControlsA;
     using FlowControlsB;
     using FlowControlsC;
+    using FunctionsA;
 
     class IntermediateExercises
     {
@@ -52,6 +53,14 @@
             Alphabet.DisplayAlphabet();
             ConditionalOperation.ConditionalOp();
             NestedConditional.NestedConditionalOp();
+
+            // Functions A
+            CountSpaces.SpaceFunction();
+            FormatText.Formatting();
+            CalculateDouble.CalculateDoubles();
+            CalculateUsingReference.CalculateRefDouble();
+            SwapParameter.SwapParameters();
+            AddingIndexInArray.AddArray();
         }
     }
 }
