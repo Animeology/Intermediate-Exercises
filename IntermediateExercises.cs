@@ -2,6 +2,7 @@
 {
     using Arithmetic;
     using Arrays;
+    using BinaryFiles;
 
     class IntermediateExercises
     {
@@ -21,6 +22,12 @@
             StructureArray.ArrayStruct();
             MathStatisticsArray.MathematicalStatistics();
             Circumference.CalculateCircumference();
+
+            // Binary Files
+            ReadIDEFile.ReadID3();
+            ReadBMPFile.ReadBMP();
+            BMPImageFile.BMPImage();
+            InvertedBinaryFile.InvertedFile();
         }
     }
 }
