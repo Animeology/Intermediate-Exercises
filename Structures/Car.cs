@@ -4,14 +4,13 @@
     {
         public string model;
         public int year;
+        public int Gasoline { get; set; }
 
         public void SetCar()
         {
             model = Console.ReadLine()!;
             year = Convert.ToInt32(Console.ReadLine());
         }
-
-        public int Gasoline { get; set; }
 
         public Car(int gasoline)
         {
