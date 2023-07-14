@@ -18,32 +18,37 @@
                 {
                     Console.Write('-');
                 }
-                Console.WriteLine();
+                PrintNewLine();
 
                 for (int i = 0; i < text.Length * 2 - 1; i++)
                 {
                     Console.Write(' ');
                 }
-                Console.WriteLine();
+                PrintNewLine();
 
                 for (int i = 0; i < text.Length; i++)
                 {
                     Console.Write(text[i] + " ");
                 }
-                Console.WriteLine();
+                PrintNewLine();
 
                 for (int i = 0; i < text.Length * 2 - 1; i++)
                 {
                     Console.Write(' ');
                 }
-                Console.WriteLine();
+                PrintNewLine();
 
                 for (int i = 0; i < text.Length * 2 - 1; i++)
                 {
                     Console.Write('-');
                 }
-                Console.WriteLine();
+                PrintNewLine();
             }
+        }
+
+        static void PrintNewLine()
+        {
+            Console.WriteLine();
         }
     }
 }
