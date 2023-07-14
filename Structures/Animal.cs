@@ -13,6 +13,5 @@
             return m_name;
         }
         public abstract void Eat();
-
     }
 }
