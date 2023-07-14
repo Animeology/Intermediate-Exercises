@@ -14,4 +14,12 @@
         }
         public abstract void Eat();
     }
+
+    public class Dog : Animal
+    {
+        public override void Eat()
+        {
+            Console.WriteLine("Eating");
+        }
+    }
 }
