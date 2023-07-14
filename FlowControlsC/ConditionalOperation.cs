@@ -13,9 +13,14 @@
             var num2Pos = b > 0 ? "B is positive" : "B is negative";
             var bothPos = a > 0 && b > 0 ? "Both are positive" : "One of them is negative or Both are negative";
 
+            Print(num1Pos);
+            Print(num2Pos);
+            Print(bothPos);
+        }
+
+        static void Print(string num1Pos)
+        {
             Console.WriteLine(num1Pos);
-            Console.WriteLine(num2Pos);
-            Console.WriteLine(bothPos);
         }
     }
 }
