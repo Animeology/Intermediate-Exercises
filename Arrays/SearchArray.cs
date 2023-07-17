@@ -1,32 +1,34 @@
 ﻿namespace IntermediateExercises.Arrays
 {
+    using Base;
+
     public class SearchArray
     {
         public static void SearchCertainArray()
         {
-            Console.WriteLine("Input 5 numbers and input the number to search through the array");
+            Printing.PrintLine("Input the total number for the array and input the numbers into the array and input the number to search through the array");
 
-            int count = Convert.ToInt32(Console.ReadLine());
+            int count = InputChecker.InputInt();
             int[] arr = new int[count];
 
             for (int i = 0; i < count; i++)
             {
-                arr[i] = Convert.ToInt32(Console.ReadLine());
+                arr[i] = InputChecker.InputInt();
             }
 
-            Console.WriteLine("What number do you want to search?");
-            int y = Convert.ToInt32(Console.ReadLine());
+            Printing.PrintLine("What number do you want to search?");
+            int searchedNum = InputChecker.InputInt();
 
             for (int j = 0; j < count; j++)
             {
-                if (arr[j] == y)
+                if (arr[j] == searchedNum)
                 {
-                    Console.WriteLine("The number {0} exists", y);
+                    Printing.PrintLine($"The number {searchedNum} exists");
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("The number {0} doesn't exist", y);
+                    Printing.PrintLine($"The number {searchedNum} doesn't exist");
                     break;
                 }
             }
