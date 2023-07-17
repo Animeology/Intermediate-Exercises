@@ -1,12 +1,13 @@
-﻿using IntermediateExercises.Structures;
-
-namespace IntermediateExercises.Arrays
+﻿namespace IntermediateExercises.Arrays
 {
+    using Base;
+    using Structures;
+
     public class StructureArray
     {
         public static void ArrayStruct()
         {
-            Console.WriteLine("Input 3 car models and the year of production for each and it will display them in order of production");
+            Printing.PrintLine("Input 3 car models and the year of production for each and it will display them in order of production");
 
             int totalCars = 3;
             Car[] cars = new Car[totalCars];
@@ -29,7 +30,7 @@ namespace IntermediateExercises.Arrays
 
             for (int i = 0; i < totalCars; i++)
             {
-                Console.WriteLine("Model: {0}, Year of production: {1}", cars[i].model, cars[i].year);
+                Printing.PrintLine($"Model: {cars[i].model}, Year of production: {cars[i].year}");
             }
         }
     }
