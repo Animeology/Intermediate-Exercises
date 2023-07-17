@@ -16,7 +16,7 @@
                 arr[i] = InputChecker.InputInt();
             }
 
-            Console.WriteLine("Even Numbers:");
+            Printing.PrintLine("Even Numbers:");
 
             for (int i = 0; i < count; i++)
             {
