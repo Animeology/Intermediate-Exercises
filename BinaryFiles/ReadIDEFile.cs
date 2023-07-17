@@ -2,6 +2,8 @@
 
 namespace IntermediateExercises.BinaryFiles
 {
+    using Base;
+
     public class ReadIDEFile
     {
         public static void ReadID3()
@@ -53,7 +55,7 @@ namespace IntermediateExercises.BinaryFiles
 
             if (Encoding.Default.GetString(id).Equals("TAG"))
             {
-                Console.WriteLine(ToString());
+                Printing.PrintLine(ToString());
             }
         }
     }
