@@ -1,5 +1,7 @@
 ﻿namespace IntermediateExercises.BinaryFiles
 {
+    using Base;
+
     public class BMPImageFile
     {
         public static void BMPImage()
@@ -25,7 +27,7 @@
                     + data[25] * 256 * 256 * 256;
 
 
-            Console.WriteLine("{0}x{1}", width, height);
+            Printing.PrintLine($"{width}x{height}");
         }
     }
 }
