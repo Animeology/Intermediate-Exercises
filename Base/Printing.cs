@@ -11,5 +11,15 @@
         {
             Console.Write(text);
         }
+
+        public static void PrintIntLine(int value)
+        {
+            Console.WriteLine(value);
+        }
+
+        public static void PrintInt(int value)
+        {
+            Console.Write(value);
+        }
     }
 }
