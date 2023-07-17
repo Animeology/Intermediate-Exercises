@@ -1,17 +1,19 @@
 ﻿namespace IntermediateExercises.Arrays
 {
+    using Base;
+
     public class SearchPostiveNegativeArray
     {
         public static void SearchPosAndNeg()
         {
-            Console.WriteLine("Input 10 numbers and it will display the mean for positive numbers and negative numbers");
+            Printing.PrintLine("Input 10 numbers and it will display the mean for positive numbers and negative numbers");
 
             int count = 10;
             int[] arr = new int[count];
 
             for (int i = 0; i < count; i++)
             {
-                arr[i] = Convert.ToInt32(Console.ReadLine());
+                arr[i] = InputChecker.InputInt();
             }
 
             int meanPos = 0;
@@ -44,8 +46,8 @@
                 }
             }
 
-            Console.WriteLine("Average numbers negative is {0}", meanNeg);
-            Console.WriteLine("Average numbers positive is {0}", meanPos);
+            Printing.PrintLine($"Average numbers positive is {meanPos}");
+            Printing.PrintLine($"Average numbers negative is {meanNeg}");
         }
     }
 }
