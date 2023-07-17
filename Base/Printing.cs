@@ -12,6 +12,11 @@
             Console.Write(text);
         }
 
+        public static void NewLine()
+        {
+            Console.WriteLine();
+        }
+
         public static void PrintIntLine(int value)
         {
             Console.WriteLine(value);
