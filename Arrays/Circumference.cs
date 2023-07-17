@@ -1,27 +1,29 @@
 ﻿namespace IntermediateExercises.Arrays
 {
+    using Base;
+
     public class Circumference
     {
         public static void CalculateCircumference()
         {
-            Console.WriteLine("Draw the circumference of a oval");
+            Printing.PrintLine("Draw the circumference of a oval");
 
             double x = 0;
             double y = 0;
+            double degree = 180.0;
 
             for (int i = 0; i < 360; i++)
             {
-                double radians = i * Math.PI / 180.0;
+                double radians = i * Math.PI / degree;
 
                 x = 35 + 8 * Math.Cos(radians);
                 y = 10 + 8 * Math.Sin(radians);
 
                 Console.SetCursorPosition((int)x, (int)y);
-                Console.Write("X");
+                Printing.Print("X");
             }
 
             Console.SetCursorPosition(1, 20);
         }
-
     }
 }
