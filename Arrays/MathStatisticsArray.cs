@@ -1,5 +1,7 @@
 ﻿namespace IntermediateExercises
 {
+    using Base;
+
     public class MathStatisticsArray
     {
         public static void MathematicalStatistics()
@@ -19,14 +21,14 @@
 
             void Menu()
             {
-                Console.WriteLine("1. Add");
-                Console.WriteLine("2. Show");
-                Console.WriteLine("3. Search");
-                Console.WriteLine("4. Statistics");
-                Console.WriteLine("5. Exit");
-                Console.Write("Enter a option (1-5): ");
+                Printing.PrintLine("1. Add");
+                Printing.PrintLine("2. Show");
+                Printing.PrintLine("3. Search");
+                Printing.PrintLine("4. Statistics");
+                Printing.PrintLine("5. Exit");
+                Printing.Print("Enter a option (1-5): ");
 
-                choice = Convert.ToInt32(Console.ReadLine());
+                choice = InputChecker.InputInt();
             }
 
             while (choice != 5 && count < 1000)
@@ -50,7 +52,7 @@
                     case 5:
                         break;
                     default:
-                        Console.WriteLine("Not an option!");
+                        Printing.PrintLine("Not an option!");
                         Menu();
                         break;
                 }
@@ -60,7 +62,7 @@
             {
                 if (count < total)
                 {
-                    num = Convert.ToSingle(Console.ReadLine());
+                    num = InputChecker.InputFloat();
                     arr[count] = num;
 
                     sum += arr[count];
@@ -80,7 +82,7 @@
                 }
                 else
                 {
-                    Console.WriteLine("Database is full");
+                    Printing.PrintLine("Database is full");
                 }
             }
 
@@ -90,19 +92,19 @@
                 {
                     for (int i = 0; i < count; i++)
                     {
-                        Console.Write("{0} ", arr[i]);
+                        Printing.Print($"{arr[i]} ");
                     }
                     Console.WriteLine();
                 }
                 else
                 {
-                    Console.WriteLine("No data available");
+                    Printing.PrintLine("No data available");
                 }
             }
 
             void Search()
             {
-                float searchedNum = Convert.ToInt32(Console.ReadLine());
+                float searchedNum = InputChecker.InputFloat();
 
                 bool foundNum = false;
 
@@ -115,21 +117,21 @@
                 }
                 if (foundNum)
                 {
-                    Console.WriteLine("{0} exists in the array", searchedNum);
+                    Printing.PrintLine($"{searchedNum} exists in the array");
                 }
                 else
                 {
-                    Console.WriteLine("{0} doesn't exist in the array", searchedNum);
+                    Printing.PrintLine($"{searchedNum} doesn't exist in the array");
                 }
             }
 
             void Statistics()
             {
-                Console.WriteLine("Total data: {0}", count);
-                Console.WriteLine("Sum: {0}", sum);
-                Console.WriteLine("Average: {0}", mean);
-                Console.WriteLine("Min value: {0}", min);
-                Console.WriteLine("Max value: {0}", max);
+                Printing.PrintLine($"Total data: {count}");
+                Printing.PrintLine($"Sum: {sum}");
+                Printing.PrintLine($"Average: {mean}");
+                Printing.PrintLine($"Min value: {min}");
+                Printing.PrintLine($"Max value: {max}");
             }
         }
     }
