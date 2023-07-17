@@ -4,7 +4,14 @@
     {
         public static int InputInt()
         {
-            return Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                return Convert.ToInt32(Console.ReadLine());
+            }
+            catch (FormatException ex)
+            {
+                throw new Exception("Invalid input. Not a integer.", ex);
+            }
         }
     }
 }
