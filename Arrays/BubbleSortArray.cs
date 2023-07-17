@@ -1,17 +1,19 @@
 ﻿namespace IntermediateExercises.Arrays
 {
+    using Base;
+
     public class BubbleSortArray
     {
         public static void BubbleSort()
         {
-            Console.WriteLine("Input 10 numbers and it will order them using Bubble Sort");
+            Printing.PrintLine("Input 10 numbers and it will order them using Bubble Sort");
 
             int count = 10;
             int[] nums = new int[count];
 
             for (int i = 0; i < count; i++)
             {
-                nums[i] = Convert.ToInt32(Console.ReadLine());
+                nums[i] = InputChecker.InputInt();
             }
 
             int temp;
@@ -30,7 +32,7 @@
 
             for (int i = 0; i < nums.Length; i++)
             {
-                Console.Write(nums[i]);
+                Printing.PrintInt(nums[i]);
             }
         }
     }
