@@ -94,7 +94,7 @@
                     {
                         Printing.Print($"{arr[i]} ");
                     }
-                    Console.WriteLine();
+                    Printing.NewLine();
                 }
                 else
                 {
