@@ -1,10 +1,12 @@
 ﻿namespace IntermediateExercises.FunctionsC
 {
+    using Base;
+
     public class MaxToMinArray
     {
         public static void MaxMinArray()
         {
-            Console.WriteLine("Input 5 numbers into the array and it will find the max and min number in the array");
+            Printing.PrintLine("Input 5 numbers into the array and it will find the max and min number in the array");
 
             int count = 5;
             int[] arr = new int[count];
@@ -14,7 +16,7 @@
 
             for (int i = 0; i < count; i++)
             {
-                arr[i] = Convert.ToInt32(Console.ReadLine());
+                arr[i] = InputChecker.InputInt();
             }
 
             FindMinMax(arr, max, min);
@@ -32,8 +34,8 @@
                         min = arr[i];
                     }
                 }
-                Console.WriteLine("Min: {0}", min);
-                Console.WriteLine("Max: {0}", max);
+                Printing.PrintLine($"Min: {min}");
+                Printing.PrintLine($"Max: {max}");
             }
         }
     }
