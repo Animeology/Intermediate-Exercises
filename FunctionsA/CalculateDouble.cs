@@ -1,14 +1,16 @@
 ﻿namespace IntermediateExercises.FunctionsA
 {
+    using Base;
+
     public class CalculateDouble
     {
         public static void CalculateDoubles()
         {
-            Console.WriteLine("Input a number and it will print the number doubled");
+            Printing.PrintLine("Input a number and it will print the number doubled");
 
-            int num = Convert.ToInt32(Console.ReadLine());
+            int num = InputChecker.InputInt();
 
-            Console.WriteLine(Double(num));
+            Printing.PrintIntLine(Double(num));
 
             int Double(int num)
             {
