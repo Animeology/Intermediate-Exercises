@@ -32,6 +32,11 @@
             Console.Write(value);
         }
 
+        public static void PrintCharLine(char value)
+        {
+            Console.WriteLine(value); 
+        }
+
         public static void PrintDoubleLine(double value)
         {
             Console.WriteLine(value);
