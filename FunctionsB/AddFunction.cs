@@ -1,14 +1,16 @@
 ﻿namespace IntermediateExercises.FunctionsB
 {
+    using Base;
+
     public class AddFunction
     {
         public static void Add()
         {
-            Console.WriteLine("Input a number and it will add to the current sum");
+            Printing.PrintLine("Input a number and it will add to the current sum");
 
-            string text = Console.ReadLine()!;
+            string text = InputChecker.InputStringOnlyNumbers();
 
-            Console.WriteLine(AddDigits(text));
+            Printing.PrintIntLine(AddDigits(text));
 
             int AddDigits(string text)
             {
