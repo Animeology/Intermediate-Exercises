@@ -1,12 +1,14 @@
 ﻿namespace IntermediateExercises.FunctionsB
 {
+    using Base;
+
     public class ReverseString
     {
         public static void StringReverse()
         {
-            Console.WriteLine("Input a text and it will be reverse");
+            Printing.PrintLine("Input a text and it will be reverse");
 
-            string text = Console.ReadLine()!;
+            string text = InputChecker.InputStringOnlyLetters();
 
             InvertString(text);
 
@@ -14,7 +16,7 @@
             {
                 char[] arr = text.ToCharArray();
                 Array.Reverse(arr);
-                Console.WriteLine(arr);
+                Printing.PrintCharArray(arr);
             }
         }
     }
