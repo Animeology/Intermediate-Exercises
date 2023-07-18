@@ -1,26 +1,23 @@
 ﻿namespace IntermediateExercises.FlowControlsC
 {
+    using Base;
+
     public class ConditionalOperation
     {
         public static void ConditionalOp()
         {
-            Console.WriteLine("Input two numbers and it will output whether they are positive");
+            Printing.PrintLine("Input two numbers and it will output whether they are positive");
 
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            int a = InputChecker.InputInt();
+            int b = InputChecker.InputInt();
 
             var num1Pos = a > 0 ? "A is positive" : "A is negative";
             var num2Pos = b > 0 ? "B is positive" : "B is negative";
             var bothPos = a > 0 && b > 0 ? "Both are positive" : "One of them is negative or Both are negative";
 
-            Print(num1Pos);
-            Print(num2Pos);
-            Print(bothPos);
-        }
-
-        static void Print(string num1Pos)
-        {
-            Console.WriteLine(num1Pos);
+            Printing.PrintLine(num1Pos);
+            Printing.PrintLine(num2Pos);
+            Printing.PrintLine(bothPos);
         }
     }
 }
