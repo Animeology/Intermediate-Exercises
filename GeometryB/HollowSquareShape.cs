@@ -1,39 +1,41 @@
 ﻿namespace IntermediateExercises.GeometryB
 {
+    using Base;
+
     public class HollowSquareShape
     {
         public static void HollowSquare()
         {
-            Console.WriteLine("Input a symbol and the width/height to display a hollow square");
+            Printing.PrintLine("Input a symbol and the width/height to display a hollow square");
 
-            char symbol = Convert.ToChar(Console.ReadLine()!);
-            int size = Convert.ToInt32(Console.ReadLine());
+            char symbol = InputChecker.InputChar();
+            int size = InputChecker.InputInt();
 
             for (int i = 0; i < size; i++)
             {
-                Console.Write(symbol);
+                Printing.PrintChar(symbol);
             }
 
-            Console.WriteLine();
+            Printing.NewLine();
 
             for (int i = 0; i < size - 2; i++)
             {
-                Console.Write(symbol);
+                Printing.PrintChar(symbol);
 
                 for (int j = 0; j < size - 2; j++)
                 {
-                    Console.Write(" ");
+                    Printing.Print(" ");
                 }
 
-                Console.WriteLine(symbol);
+                Printing.PrintCharLine(symbol);
             }
 
             for (int i = 0; i < size; i++)
             {
-                Console.Write(symbol);
+                Printing.PrintChar(symbol);
             }
 
-            Console.WriteLine();
+            Printing.NewLine();
         }
     }
 }
