@@ -1,12 +1,14 @@
 ﻿namespace IntermediateExercises.GeometryA
 {
+    using Base;
+
     public class NorthEastTriangle
     {
         public static void NETriangle()
         {
-            Console.WriteLine("Input the width to print a '*' NorthEast triangle");
+            Printing.PrintLine("Input the width to print a '*' NorthEast triangle");
 
-            int height = Convert.ToInt32(Console.ReadLine()!);
+            int height = InputChecker.InputInt();
             int width = 0;
             int max = height;
 
@@ -14,14 +16,14 @@
             {
                 for (int j = 0; j < width; j++)
                 {
-                    Console.Write(' ');
+                    Printing.PrintChar(' ');
                 }
 
                 for (int k = 0; k < max; k++)
                 {
-                    Console.Write('*');
+                    Printing.PrintChar('*');
                 }
-                Console.WriteLine();
+                Printing.NewLine();
                 width++;
                 max--;
             }
