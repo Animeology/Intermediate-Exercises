@@ -1,13 +1,15 @@
 ﻿namespace IntermediateExercises.GeometryA
 {
+    using Base;
+
     public class Graphics
     {
         public static void GraphicFunction()
         {
-            Console.WriteLine("Input two numbers for a range to calculate the following: y = (x - 4)^2");
+            Printing.PrintLine("Input two numbers for a range to calculate the following: y = (x - 4)^2");
 
-            int x = Convert.ToInt32(Console.ReadLine());
-            int y = Convert.ToInt32(Console.ReadLine());
+            int x = InputChecker.InputInt();
+            int y = InputChecker.InputInt();
 
             for (int i = x; i <= y; i++)
             {
@@ -16,9 +18,9 @@
 
                 for (int j = 0; j < graphicFunc; j++)
                 {
-                    Console.Write('*');
+                    Printing.PrintChar('*');
                 }
-                Console.WriteLine();
+                Printing.NewLine();
             }
         }
     }
