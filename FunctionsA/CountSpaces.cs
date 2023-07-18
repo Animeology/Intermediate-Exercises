@@ -1,14 +1,16 @@
 ﻿namespace IntermediateExercises.FunctionsA
 {
+    using Base;
+
     public class CountSpaces
     {
         public static void SpaceFunction()
         {
-            Console.WriteLine("Input a sentence and it will count the total spaces in the sentence");
+            Printing.PrintLine("Input a sentence and it will count the total spaces in the sentence");
 
-            string text = Console.ReadLine()!;
+            string text = InputChecker.InputString();
 
-            Console.WriteLine(CountSpaces(text));
+            Printing.PrintIntLine(CountSpaces(text));
 
             int CountSpaces(string text)
             {
