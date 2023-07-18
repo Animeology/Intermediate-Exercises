@@ -1,11 +1,13 @@
 ﻿namespace IntermediateExercises.FunctionsC
 {
+    using Base;
+
     public class MainFunctionCalculatorWithReturn
     {
         public static int MainParameterCalculatorReturn(string[] args)
         {
-            Console.WriteLine("Input an equation and it will calculate");
-            Console.WriteLine("Accepts only \"+\", \"-\", \"*\" \"x\" \"X\", \"/\" ");
+            Printing.PrintLine("Input an equation and it will calculate");
+            Printing.PrintLine("Accepts only \"+\", \"-\", \"*\" \"x\" \"X\", \"/\" ");
 
             int x = Convert.ToInt32(args[0]);
             char op = Convert.ToChar(args[1]);
@@ -34,21 +36,25 @@
             switch (op)
             {
                 case '+':
-                    Console.Write(x + y);
+                    int sum = x + y;
+                    Printing.PrintInt(sum);
                     break;
                 case '-':
-                    Console.Write(x - y);
+                    int diff = x - y;
+                    Printing.PrintInt(diff);
                     break;
                 case '*':
                 case 'x':
                 case 'X':
-                    Console.Write(x * y);
+                    int product = x * y;
+                    Printing.PrintInt(product);
                     break;
                 case '/':
-                    Console.Write(x / y);
+                    int divide = x / y;
+                    Printing.PrintInt(divide);
                     break;
                 default:
-                    Console.WriteLine("Invalid operation");
+                    Printing.PrintLine("Invalid operation");
                     break;
             }
 
