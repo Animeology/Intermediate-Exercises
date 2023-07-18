@@ -34,8 +34,20 @@ namespace IntermediateExercises.Base
 
             if (Regex.IsMatch(userInput, @"\d"))
             {
-                Console.WriteLine("Invalid input. Only words and not numbers");
-                throw new Exception("Invalid input. Not an string input");
+                Console.WriteLine("Invalid input. Only letters and not numbers");
+                throw new Exception("Invalid input. Not a letter only input");
+            }
+            return userInput;
+        }
+
+        public static string InputStringOnlyNumbers()
+        {
+            string userInput = Console.ReadLine()!;
+
+            if(Regex.IsMatch(userInput, @"^\d+$"))
+            {
+                Console.WriteLine("Invalid input. Only numbers and not letters");
+                throw new Exception("Invalid input. Not a number only input");
             }
             return userInput;
         }
