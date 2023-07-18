@@ -1,12 +1,14 @@
 ﻿namespace IntermediateExercises.GeometryB
 {
+    using Base;
+
     public class PyramidShape
     {
         public static void Pyramid()
         {
-            Console.WriteLine("Input a string and it will make a triangle");
+            Printing.PrintLine("Input a string and it will make a triangle");
 
-            string word = Console.ReadLine()!;
+            string word = InputChecker.InputStringOnlyLetters();
             int position = word.Length / 2;
             int height = word.Length / 2 + 1;
             int amount = 1;
@@ -22,10 +24,10 @@
             {
                 for (int j = 0; j < position; j++)
                 {
-                    Console.Write(" ");
+                    Printing.Print(" ");
                 }
 
-                Console.WriteLine(word.Substring(position, amount));
+                Printing.PrintLine(word.Substring(position, amount));
                 position--;
                 amount += 2;
             }
