@@ -1,17 +1,19 @@
 ﻿namespace IntermediateExercises.FlowControlsA
 {
+    using Base;
+
     public class MathematicalStatistics
     {
         public static void MathStatistics()
         {
-            Console.WriteLine("Input 5 numbers and it will calculate the sum, mean, the max, and the minimum number");
+            Printing.PrintLine("Input 5 numbers and it will calculate the sum, mean, the max, and the minimum number");
 
             int totalNums = 5;
             int[] nums = new int[totalNums];
 
             for (int i = 0; i < totalNums; i++)
             {
-                nums[i] = int.Parse(Console.ReadLine()!);
+                nums[i] = InputChecker.InputInt();
             }
 
             int sum = 0;
@@ -36,10 +38,10 @@
 
             int mean = sum / totalNums;
 
-            Console.WriteLine("Sum: {0}", sum);
-            Console.WriteLine("Mean: {0}", mean);
-            Console.WriteLine("Max: {0}", max);
-            Console.WriteLine("Min: {0}", min);
+            Printing.PrintLine($"Sum: {sum}");
+            Printing.PrintLine($"Mean: {mean}");
+            Printing.PrintLine($"Max: {max}");
+            Printing.PrintLine($"Min: {min}");
         }
     }
 }
