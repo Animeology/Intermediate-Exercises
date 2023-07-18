@@ -1,10 +1,12 @@
 ﻿namespace IntermediateExercises.DataTypesB
 {
+    using Base;
+
     public class HexaTable
     {
         public static void HexadecimalTable()
         {
-            Console.WriteLine("Prints a hexadecimal table");
+            Printing.PrintLine("Prints a hexadecimal table");
 
             int max = 255;
 
@@ -12,14 +14,14 @@
             {
                 if (i < 16)
                 {
-                    Console.Write("0");
+                    Printing.Print("0");
                 }
 
-                Console.Write("{0} ", Convert.ToString(i, 16));
+                Printing.PrintLine($"{Convert.ToString(i, 16)} ");
 
                 if (i % 16 == 15)
                 {
-                    Console.WriteLine();
+                    Printing.NewLine();
                 }
             }
         }
