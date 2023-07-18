@@ -1,34 +1,39 @@
 ﻿namespace IntermediateExercises.FlowControlsB
 {
+    using Base;
+
     public class AccessControl
     {
         public static void Login()
         {
-            Console.WriteLine("Try to login with the username and password");
+            Printing.PrintLine("Try to login with the username and password");
+
+            string expectedUser = "Joseph";
+            string expectedPass = "12345";
 
             int attempts = 0;
 
             while (attempts < 3)
             {
-                Console.Write("Username: ");
-                string username = Console.ReadLine()!;
+                Printing.Print("Username: ");
+                string username = InputChecker.InputString();
 
-                Console.Write("Password: ");
-                string password = Console.ReadLine()!;
+                Printing.Print("Password: ");
+                string password = InputChecker.InputString();
 
-                if (username == "12" && password == "1234")
+                if (username == expectedUser && password == expectedPass)
                 {
-                    Console.WriteLine("Login Successful!");
+                    Printing.PrintLine("Login Successful!");
                 }
                 else
                 {
-                    Console.WriteLine("Login Failed!");
+                    Printing.PrintLine("Login Failed!");
                 }
                 attempts++;
 
                 if (attempts == 3)
                 {
-                    Console.WriteLine("You used all your attempts!");
+                    Printing.PrintLine("You used all your attempts!");
                 }
             }
         }
