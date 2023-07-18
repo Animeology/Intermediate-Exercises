@@ -1,4 +1,6 @@
-﻿namespace IntermediateExercises.Base
+﻿using System.Text.RegularExpressions;
+
+namespace IntermediateExercises.Base
 {
     public class InputChecker
     {
@@ -24,6 +26,18 @@
             {
                 throw new Exception("Invalid input. Not a float.", ex);
             }
+        }
+
+        public static string InputString()
+        {
+            string userInput = Console.ReadLine()!;
+
+            if (Regex.IsMatch(userInput, @"\d"))
+            {
+                Console.WriteLine("Invalid input. Not an valid string input");
+                throw new Exception("Invalid input. Not an string input");
+            }
+            return userInput;
         }
     }
 }
