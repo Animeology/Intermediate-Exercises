@@ -1,26 +1,29 @@
 ﻿namespace IntermediateExercises.GeometryB
 {
+    using Base;
+
     public class ParallelogramShape
     {
         public static void Parallelogram()
         {
-            Console.WriteLine("Input the width, height, and symbol to display a parallelogram");
-            int width = Convert.ToInt32(Console.ReadLine());
-            int height = Convert.ToInt32(Console.ReadLine());
-            char symbol = Convert.ToChar(Console.ReadLine()!);
+            Printing.PrintLine("Input the width, height, and symbol to display a parallelogram");
+
+            int width = InputChecker.InputInt();
+            int height = InputChecker.InputInt();
+            char symbol = InputChecker.InputChar();
 
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < width; j++)
                 {
-                    Console.Write(symbol);
+                    Printing.PrintChar(symbol);
                 }
 
-                Console.WriteLine();
+                Printing.NewLine();
 
                 for (int k = 0; k <= i; k++)
                 {
-                    Console.Write(" ");
+                    Printing.Print(" ");
                 }
             }
         }
