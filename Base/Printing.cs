@@ -26,5 +26,10 @@
         {
             Console.Write(value);
         }
+
+        public static void PrintChar(char value)
+        {
+            Console.Write(value);
+        }
     }
 }
