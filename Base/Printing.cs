@@ -31,5 +31,20 @@
         {
             Console.Write(value);
         }
+
+        public static void PrintDoubleLine(double value)
+        {
+            Console.WriteLine(value);
+        }
+
+        public static void PrintIntArray(int[] values)
+        {
+            Console.WriteLine(values);
+        }
+
+        public static void PrintCharArray(char[] values)
+        {
+            Console.WriteLine(values);
+        }
     }
 }
