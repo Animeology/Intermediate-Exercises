@@ -1,15 +1,17 @@
 ﻿namespace IntermediateExercises.FunctionsC
 {
+    using Base;
+
     public class PalindromeFunction
     {
         public static void Palindrome()
         {
-            Console.WriteLine("Input a string and it will check if it is a palindrome");
+            Printing.PrintLine("Input a string and it will check if it is a palindrome");
 
-            string text = Console.ReadLine()!;
+            string text = InputChecker.InputStringOnlyLetters();
             string reverse = string.Empty;
 
-            Console.WriteLine(IsPalindrome(text));
+            Printing.PrintBool(IsPalindrome(text));
 
             bool IsPalindrome(string text)
             {
