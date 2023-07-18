@@ -1,40 +1,42 @@
 ﻿namespace IntermediateExercises.GeometryB
 {
+    using Base;
+
     public class HollowRectShape
     {
         public static void HollowRectangle()
         {
-            Console.WriteLine("Input a symbol and the width/height to display a hollow rectangle");
+            Printing.PrintLine("Input a symbol and the width/height to display a hollow rectangle");
 
-            char symbol = Convert.ToChar(Console.ReadLine()!);
-            int width = Convert.ToInt32(Console.ReadLine());
-            int height = Convert.ToInt32(Console.ReadLine());
+            char symbol = InputChecker.InputChar();
+            int width = InputChecker.InputInt();
+            int height = InputChecker.InputInt();
 
             for (int i = 0; i < width; i++)
             {
-                Console.Write(symbol);
+                Printing.PrintChar(symbol);
             }
 
-            Console.WriteLine();
+            Printing.NewLine();
 
             for (int i = 0; i < height; i++)
             {
-                Console.Write(symbol);
+                Printing.PrintChar(symbol);
 
                 for (int j = 0; j < width - 2; j++)
                 {
-                    Console.Write(" ");
+                    Printing.Print(" ");
                 }
 
-                Console.WriteLine(symbol);
+                Printing.PrintCharLine(symbol);
             }
 
             for (int i = 0; i < width; i++)
             {
-                Console.Write(symbol);
+                Printing.PrintChar(symbol);
             }
 
-            Console.WriteLine();
+            Printing.NewLine();
         }
     }
 }
