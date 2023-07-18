@@ -1,16 +1,18 @@
 ﻿namespace IntermediateExercises.FunctionsB
 {
+    using Base;
+
     public class ModifyCharacters
     {
         public static void ModifyCharacter()
         {
-            Console.WriteLine("Input a text, position of the lettter you want to change and input a new character");
+            Printing.PrintLine("Input a text, position of the lettter you want to change and input a new character");
 
-            string text = Console.ReadLine()!;
-            int position = Convert.ToInt32(Console.ReadLine());
-            char letter = Convert.ToChar(Console.Read());
+            string text = InputChecker.InputStringOnlyLetters();
+            int position = InputChecker.InputInt();
+            char letter = InputChecker.InputChar();
 
-            Console.WriteLine(ChangeLetter(text, position, letter));
+            Printing.PrintLine(ChangeLetter(text, position, letter));
 
             string ChangeLetter(string text, int position, char letter)
             {
