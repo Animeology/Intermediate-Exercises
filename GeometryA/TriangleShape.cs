@@ -1,22 +1,24 @@
 ﻿namespace IntermediateExercises.GeometryA
 {
+    using Base;
+
     public class TriangleShape
     {
         public static void Triangle()
         {
-            Console.WriteLine("Input the symbol and a width to print a triangle");
+            Printing.PrintLine("Input the symbol and a width to print a triangle");
 
-            char symbol = Convert.ToChar(Console.ReadLine()!);
-            int width = Convert.ToInt32(Console.ReadLine()!);
+            char symbol = InputChecker.InputChar();
+            int width = InputChecker.InputInt();
             int height = width;
 
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < width; j++)
                 {
-                    Console.Write(symbol);
+                    Printing.PrintChar(symbol);
                 }
-                Console.WriteLine();
+                Printing.NewLine();
                 width--;
             }
         }
