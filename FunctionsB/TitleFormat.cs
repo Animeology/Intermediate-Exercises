@@ -1,12 +1,14 @@
 ﻿namespace IntermediateExercises.FunctionsB
 {
+    using Base;
+
     public class TitleFormat
     {
         public static void Title()
         {
-            Console.WriteLine("Input a string and it will print it like a title");
+            Printing.PrintLine("Input a string and it will print it like a title");
 
-            string text = Console.ReadLine()!;
+            string text = InputChecker.InputStringOnlyLetters();
 
             WriteTitle(text);
 
@@ -16,39 +18,34 @@
 
                 for (int i = 0; i < text.Length * 2 - 1; i++)
                 {
-                    Console.Write('-');
+                    Printing.PrintChar('-');
                 }
-                PrintNewLine();
+                Printing.NewLine();
 
                 for (int i = 0; i < text.Length * 2 - 1; i++)
                 {
-                    Console.Write(' ');
+                    Printing.PrintChar(' ');
                 }
-                PrintNewLine();
+                Printing.NewLine();
 
                 for (int i = 0; i < text.Length; i++)
                 {
-                    Console.Write(text[i] + " ");
+                    Printing.Print($"{text[i]} ");
                 }
-                PrintNewLine();
+                Printing.NewLine();
 
                 for (int i = 0; i < text.Length * 2 - 1; i++)
                 {
-                    Console.Write(' ');
+                    Printing.PrintChar(' ');
                 }
-                PrintNewLine();
+                Printing.NewLine();
 
                 for (int i = 0; i < text.Length * 2 - 1; i++)
                 {
-                    Console.Write('-');
+                    Printing.PrintChar('-');
                 }
-                PrintNewLine();
+                Printing.NewLine();
             }
-        }
-
-        static void PrintNewLine()
-        {
-            Console.WriteLine();
         }
     }
 }
