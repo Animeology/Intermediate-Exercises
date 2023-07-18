@@ -1,14 +1,16 @@
 ﻿namespace IntermediateExercises.FunctionsC
 {
+    using Base;
+
     public class NumberChecker
     {
         public static void CheckNumber()
         {
-            Console.WriteLine("Input a string to check if the whole string is only alphabetic");
+            Printing.PrintLine("Input a string to check if the whole string is only alphabetic");
 
-            string text = Console.ReadLine()!;
+            string text = InputChecker.InputStringOnlyLetters();
 
-            Console.WriteLine(IsNumber(text));
+            Printing.PrintBool(IsNumber(text));
 
             bool IsNumber(string text)
             {
