@@ -16,10 +16,10 @@
             while (attempts < 3)
             {
                 Printing.Print("Username: ");
-                string username = InputChecker.InputString();
+                string username = InputChecker.InputStringOnlyWords();
 
                 Printing.Print("Password: ");
-                string password = InputChecker.InputString();
+                string password = InputChecker.InputStringOnlyWords();
 
                 if (username == expectedUser && password == expectedPass)
                 {

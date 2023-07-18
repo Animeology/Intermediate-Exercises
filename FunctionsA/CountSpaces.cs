@@ -8,7 +8,7 @@
         {
             Printing.PrintLine("Input a sentence and it will count the total spaces in the sentence");
 
-            string text = InputChecker.InputString();
+            string text = InputChecker.InputStringOnlyWords();
 
             Printing.PrintIntLine(CountSpaces(text));
 

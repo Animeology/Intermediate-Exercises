@@ -15,7 +15,7 @@
 
             for (int i = 0; i < count; i++)
             {
-                string name = InputChecker.InputString();
+                string name = InputChecker.InputStringOnlyWords();
                 persons[i] = new Person(name);
             }
 

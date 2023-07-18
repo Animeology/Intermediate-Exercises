@@ -28,13 +28,13 @@ namespace IntermediateExercises.Base
             }
         }
 
-        public static string InputString()
+        public static string InputStringOnlyWords()
         {
             string userInput = Console.ReadLine()!;
 
             if (Regex.IsMatch(userInput, @"\d"))
             {
-                Console.WriteLine("Invalid input. Not an valid string input");
+                Console.WriteLine("Invalid input. Only words and not numbers");
                 throw new Exception("Invalid input. Not an string input");
             }
             return userInput;
