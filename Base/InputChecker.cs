@@ -28,6 +28,30 @@ namespace IntermediateExercises.Base
             }
         }
 
+        public static double InputDouble()
+        {
+            try
+            {
+                return Convert.ToDouble(Console.ReadLine());
+            }
+            catch (FormatException ex)
+            {
+                throw new Exception("Invalid input. Not a double.", ex);
+            }
+        }
+
+        public static char InputChar()
+        {
+            try
+            {
+                return Convert.ToChar(Console.Read()!);
+            }
+            catch (FormatException ex)
+            {
+                throw new Exception("Invalid input. Not a char.", ex);
+            }
+        }
+
         public static string InputStringOnlyLetters()
         {
             string userInput = Console.ReadLine()!;
