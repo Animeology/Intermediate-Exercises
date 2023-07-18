@@ -1,14 +1,16 @@
 ﻿namespace IntermediateExercises.FunctionsA
 {
+    using Base;
+
     public class CalculateUsingReference
     {
         public static void CalculateRefDouble()
         {
-            Console.WriteLine("Input a number and it will print the number doubled");
+            Printing.PrintLine("Input a number and it will print the number doubled");
 
-            int num = Convert.ToInt32(Console.ReadLine());
+            int num = InputChecker.InputInt();
 
-            Console.WriteLine(Double(ref num));
+            Printing.PrintIntLine(Double(ref num));
 
             int Double(ref int num)
             {
