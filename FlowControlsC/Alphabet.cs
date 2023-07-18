@@ -1,14 +1,16 @@
 ﻿namespace IntermediateExercises.FlowControlsC
 {
+    using Base;
+
     public class Alphabet
     {
         public static void DisplayAlphabet()
         {
-            Console.WriteLine("Displays the Alphabet");
+            Printing.PrintLine("Displays the Alphabet");
 
-            for (char c = 'A'; c < 'Z'; c++)
+            for (char alpha = 'A'; alpha < 'Z'; alpha++)
             {
-                Console.Write("{0} ", c);
+                Printing.Print($"{alpha} ");
             }
         }
     }
