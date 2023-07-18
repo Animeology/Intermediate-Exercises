@@ -1,12 +1,14 @@
 ﻿namespace IntermediateExercises.FunctionsA
 {
+    using Base;
+
     public class FormatText
     {
         public static void Formatting()
         {
-            Console.WriteLine("Input a word and it will in the center and underlined");
+            Printing.PrintLine("Input a word and it will in the center and underlined");
 
-            string text = Console.ReadLine()!;
+            string text = InputChecker.InputString();
 
             WriteCenteredUnderline(text);
 
@@ -16,16 +18,16 @@
                 double y = 5;
 
                 Console.SetCursorPosition((int)x, (int)y);
-                Console.Write(text);
+                Printing.Print(text);
 
-                Console.WriteLine();
+                Printing.NewLine();
 
                 for (int i = 0; i < text.Length; i++)
                 {
                     Console.SetCursorPosition((int)x + i, (int)y + 1);
-                    Console.Write('-');
+                    Printing.PrintChar('-');
                 }
-                Console.WriteLine();
+                Printing.NewLine();
             }
         }
     }
