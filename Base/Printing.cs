@@ -37,6 +37,11 @@
             Console.WriteLine(value);
         }
 
+        public static void PrintBool(bool value)
+        {
+            Console.WriteLine(value);
+        }
+
         public static void PrintIntArray(int[] values)
         {
             Console.WriteLine(values);
