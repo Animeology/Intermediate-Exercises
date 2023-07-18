@@ -1,15 +1,17 @@
 ﻿namespace IntermediateExercises.FunctionsB
 {
+    using Base;
+
     public class PowerOperation
     {
         public static void PowerOp()
         {
-            Console.WriteLine("Input 2 numbers and the it will calculate the first number of the power of the second number");
+            Printing.PrintLine("Input 2 numbers and the it will calculate the first number of the power of the second number");
 
-            double num = Convert.ToInt32(Console.ReadLine());
-            double power = Convert.ToInt32(Console.ReadLine());
+            double num = InputChecker.InputDouble();
+            double power = InputChecker.InputDouble();
 
-            Console.WriteLine(Power(num, power));
+            Printing.PrintDoubleLine(Power(num, power));
 
             double Power(double num, double power)
             {
