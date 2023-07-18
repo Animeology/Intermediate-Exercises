@@ -1,24 +1,26 @@
 ﻿namespace IntermediateExercises.DataTypesB
 {
+    using Base;
+
     public class PrimeFactor
     {
         public static void PrimeFactors()
         {
-            Console.WriteLine("Input a integer and it will display the product of its prime factor");
+            Printing.PrintLine("Input a integer and it will display the product of its prime factor");
 
-            int num = Convert.ToInt32(Console.ReadLine());
+            int num = InputChecker.InputInt();
             int divisor = 2;
 
             while (num > 1)
             {
                 while (num % divisor == 0)
                 {
-                    Console.Write(divisor + "x");
+                    Printing.Print(divisor + "x");
                     num = num / divisor;
                 }
                 divisor++;
             }
-            Console.WriteLine(1);
+            Printing.PrintIntLine(1);
         }
     }
 }
