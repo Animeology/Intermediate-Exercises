@@ -17,12 +17,12 @@
             {
                 if (i == 0)
                 {
-                    string name = InputChecker.InputStringOnlyWords();
+                    string name = InputChecker.InputStringOnlyLetters();
                     persons[i] = new Teacher(name);
                 }
                 else
                 {
-                    string name = InputChecker.InputStringOnlyWords();
+                    string name = InputChecker.InputStringOnlyLetters();
                     persons[i] = new Student(name);
                 }
 

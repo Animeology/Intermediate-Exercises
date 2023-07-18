@@ -28,7 +28,7 @@ namespace IntermediateExercises.Base
             }
         }
 
-        public static string InputStringOnlyWords()
+        public static string InputStringOnlyLetters()
         {
             string userInput = Console.ReadLine()!;
 

@@ -8,7 +8,7 @@
         {
             Printing.PrintLine("Input a word and it will in the center and underlined");
 
-            string text = InputChecker.InputStringOnlyWords();
+            string text = InputChecker.InputStringOnlyLetters();
 
             WriteCenteredUnderline(text);
 
