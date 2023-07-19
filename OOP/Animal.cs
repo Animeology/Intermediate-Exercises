@@ -1,5 +1,6 @@
 ﻿namespace IntermediateExercises.OOP
 {
+    using Base;
     using Structures;
 
     public class Animal
@@ -7,11 +8,11 @@
         public static void AnimalEating()
         {
             Dog dog = new Dog();
-            string name = Console.ReadLine()!;
+            string name = InputChecker.InputStringOnlyLetters();
 
             dog.SetName(name);
 
-            Console.WriteLine(dog.GetName());
+            Printing.PrintLine(dog.GetName());
             dog.Eat();
         }
     }
