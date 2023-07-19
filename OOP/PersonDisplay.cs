@@ -7,7 +7,7 @@
     {
         public void PersonNameConAndDes()
         {
-            Console.WriteLine("Input 3 names and it will store in the array and displays it");
+            Printing.PrintLine("Input 3 names and it will store in the array and displays it");
 
             int count = 3;
 
@@ -21,7 +21,7 @@
 
             for (int i = 0; i < count; i++)
             {
-                Console.WriteLine(persons[i].ToString());
+                Printing.PrintLine(persons[i].ToString());
             }
         }
     }
