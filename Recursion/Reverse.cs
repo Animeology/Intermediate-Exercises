@@ -4,7 +4,7 @@
 
     public class Reverse
     {
-        public void ReverseRecursion()
+        public static void ReverseRecursion()
         {
             Printing.PrintLine("Input a string and it will be reverse by recursion");
             string text = InputChecker.InputStringOnlyLetters();
