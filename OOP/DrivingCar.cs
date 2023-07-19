@@ -5,7 +5,7 @@
 
     public class DrivingCar
     {
-        public void CarDriving()
+        public static void CarDriving()
         {
             Car car = new Car(0);
 

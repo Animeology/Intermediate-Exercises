@@ -5,7 +5,7 @@
 
     public class PersonName
     {
-        public void PersonNameInArray()
+        public static void PersonNameInArray()
         {
             Printing.PrintLine("Input 3 names and it will store in the array and displays it");
 
