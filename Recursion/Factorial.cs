@@ -4,7 +4,7 @@
 
     public class Factorial
     {
-        public void FactorialRecursion()
+        public static void FactorialRecursion()
         {
             Printing.PrintLine("A Factorial that starts with the user input");
             int num = InputChecker.InputInt();
