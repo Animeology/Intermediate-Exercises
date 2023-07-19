@@ -4,7 +4,7 @@
 
     public class Palindrome
     {
-        public void PalindromeRecursion()
+        public static void PalindromeRecursion()
         {
             Printing.PrintLine("Input a string and it will check if it is a palindrome by recursion");
             string text = InputChecker.InputStringOnlyLetters();
