@@ -1,7 +1,7 @@
 ﻿namespace IntermediateExercises.OOP
 {
-    using Structures;
     using Base;
+    using Structures;
 
     public class Inheritance
     {
