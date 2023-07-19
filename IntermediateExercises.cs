@@ -12,6 +12,8 @@
     using FunctionsC;
     using GeometryA;
     using GeometryB;
+    using OOP;
+    using Recursion;
 
     class IntermediateExercises
     {
@@ -93,6 +95,23 @@
             HollowRectShape.HollowRectangle();
             ParallelogramShape.Parallelogram();
             PyramidShape.Pyramid();
+
+            // OOP
+            Animal.AnimalEating();
+            DrivingCar.CarDriving();
+            Inheritance.InheritanceObjects();
+            PersonDisplay.PersonNameConAndDes();
+            PersonName.PersonNameInArray();
+            PhotobookTest.PhotoBookTest();
+            StudentAndTeacher.StudentTeacherTest();
+
+            // Recursion
+            Factorial.FactorialRecursion();
+            Fibonacci.FibonacciRecursion();
+            Multiply.MultiplyRecursion();
+            Palindrome.PalindromeRecursion();
+            Power.PowerRecursion();
+            Reverse.ReverseRecursion();
         }
     }
 }
