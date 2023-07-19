@@ -4,7 +4,7 @@
 
     public class Power
     {
-        public void PowerRecursion()
+        public static void PowerRecursion()
         {
             Printing.PrintLine("Input two numbers and it will do the power of the number using recursion");
 
