@@ -4,7 +4,7 @@
 
     public class Fibonacci
     {
-        public void FibonacciRecursion()
+        public static void FibonacciRecursion()
         {
             Printing.PrintLine("A Fibonacci that starts with the user input");
             int num = InputChecker.InputInt();
