@@ -4,7 +4,7 @@
 
     public class Multiply
     {
-        public void MultiplyRecursion()
+        public static void MultiplyRecursion()
         {
             Printing.PrintLine("Input 2 numbers and it will multiply it by recursion");
 
