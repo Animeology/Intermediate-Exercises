@@ -15,6 +15,7 @@
     using SQLite;
     using OOP;
     using Recursion;
+    using TextFilesA;
 
     class IntermediateExercises
     {
@@ -119,6 +120,9 @@
             CreateDatabase.CreationDB();
             CreateMemoryDatabase.CreateMemoryDB();
             CRUD.CRUDMenu();
+
+            // Text Files A
+            SearchLines.SearchLinesInFile();
         }
     }
 }
