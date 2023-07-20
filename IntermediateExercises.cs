@@ -12,6 +12,7 @@
     using FunctionsC;
     using GeometryA;
     using GeometryB;
+    using SQLite;
     using OOP;
     using Recursion;
 
@@ -112,6 +113,12 @@
             Palindrome.PalindromeRecursion();
             Power.PowerRecursion();
             Reverse.ReverseRecursion();
+
+            // SQLite
+            ReadingTheDatabase.ReadingListFromDB();
+            CreateDatabase.CreationDB();
+            CreateMemoryDatabase.CreateMemoryDB();
+            CRUD.CRUDMenu();
         }
     }
 }
