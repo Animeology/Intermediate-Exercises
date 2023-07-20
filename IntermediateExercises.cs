@@ -16,6 +16,7 @@
     using OOP;
     using Recursion;
     using TextFilesA;
+    using TextFilesB;
 
     class IntermediateExercises
     {
@@ -123,6 +124,11 @@
 
             // Text Files A
             SearchLines.SearchLinesInFile();
+
+            // Text Files B
+            ReverseFile.ReverseInFile();
+            LowerToUpperFile.ChangeLowerToUpperFile();
+            WordCounter.CountWordsInFile();
         }
     }
 }
