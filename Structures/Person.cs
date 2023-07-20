@@ -10,6 +10,8 @@
             m_name = name;
         }
 
+        public Person() { }
+
         public override string ToString()
         {
             return "Hello!, My name is " + m_name;
