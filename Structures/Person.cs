@@ -17,6 +17,11 @@
             return "Hello!, My name is " + m_name;
         }
 
+        public string ToString(string name, int age)
+        {
+            return name + "\n" + age;
+        }
+
         ~Person()
         {
             m_name = string.Empty;
