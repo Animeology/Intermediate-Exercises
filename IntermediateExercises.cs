@@ -18,6 +18,7 @@
     using TextFilesA;
     using TextFilesB;
     using GenericCollections;
+    using Base;
 
     class IntermediateExercises
     {
@@ -132,8 +133,16 @@
             //WordCounter.CountWordsInFile();
 
             // Generic Collections
-            ArrayPersonList list = new ArrayPersonList();
-            list.PrintPerson();
+            //ArrayPersonList list = new ArrayPersonList();
+            //list.PrintPerson();
+
+            Queue queue = new Queue(10);
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+
+            queue.DeQueue();
+
+            Printing.PrintIntLine(queue.DeQueue());
         }
     }
 }
