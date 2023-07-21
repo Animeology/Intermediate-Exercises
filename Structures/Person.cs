@@ -1,4 +1,6 @@
-﻿namespace IntermediateExercises.Structures
+﻿using System.Xml.Linq;
+
+namespace IntermediateExercises.Structures
 {
     public class Person
     {
@@ -14,12 +16,8 @@
 
         public override string ToString()
         {
-            return "Hello!, My name is " + m_name;
-        }
-
-        public string ToString(string name, int age)
-        {
-            return name + "\n" + age;
+            //return "Hello!, My name is " + m_name;
+            return m_name + " - " + m_age;
         }
 
         ~Person()
