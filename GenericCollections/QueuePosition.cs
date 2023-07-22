@@ -1,12 +1,12 @@
 ﻿namespace IntermediateExercises.GenericCollections
 {
-    public class Queue
+    public class QueuePosition
     {
         int[] queue;
         int currentPos;
 
 
-        public Queue(int queueSize)
+        public QueuePosition(int queueSize)
         {
             queue = new int[queueSize];
             currentPos = -1;
