@@ -136,13 +136,14 @@
             //ArrayPersonList list = new ArrayPersonList();
             //list.PrintPerson();
 
-            Queue queue = new Queue(10);
-            queue.Enqueue(1);
-            queue.Enqueue(2);
+            //QueuePosition queue = new QueuePosition(10);
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.DeQueue();
+            //Printing.PrintIntLine(queue.DeQueue());
 
-            queue.DeQueue();
-
-            Printing.PrintIntLine(queue.DeQueue());
+            ObjectQueue queue = new ObjectQueue();
+            queue.PrintPersonInQueue();
         }
     }
 }
