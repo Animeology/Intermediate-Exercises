@@ -5,7 +5,6 @@
         int[] queue;
         int currentPos;
 
-
         public QueuePosition(int queueSize)
         {
             queue = new int[queueSize];
