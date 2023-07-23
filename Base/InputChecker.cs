@@ -1,7 +1,7 @@
-﻿using System.Text.RegularExpressions;
-
-namespace IntermediateExercises.Base
+﻿namespace IntermediateExercises.Base
 {
+    using System.Text.RegularExpressions;
+
     public class InputChecker
     {
         public static int InputInt()
