@@ -145,14 +145,17 @@
             //ObjectQueue queue = new ObjectQueue();
             //queue.PrintPersonInQueue();
 
-            StackArrays stack = new StackArrays(10);
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            int val1 = stack.Pop();
-            int val2 = stack.Pop();
-            Printing.PrintIntLine(val1);
-            Printing.PrintIntLine(val2);
+            //StackArrays stack = new StackArrays(10);
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
+            //int val1 = stack.Pop();
+            //int val2 = stack.Pop();
+            //Printing.PrintIntLine(val1);
+            //Printing.PrintIntLine(val2);
+
+            StackObjects stack = new StackObjects();
+            stack.PrintPersonInQueue();
         }
     }
 }
