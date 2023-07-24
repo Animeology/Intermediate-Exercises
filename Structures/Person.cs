@@ -1,15 +1,25 @@
-﻿using System.Xml.Linq;
+﻿using System.Text;
 
 namespace IntermediateExercises.Structures
 {
+    [Serializable]
     public class Person
     {
         public string m_name { get; set; }
         public int m_age { get; set; }
 
+        public City city { get; set; }
+
         public Person(string name)
         {
             m_name = name;
+        }
+
+        public Person(string name, int age, City city)
+        {
+            m_name = name;
+            m_age = age;
+            this.city = city;
         }
 
         public Person() { }
@@ -17,7 +27,16 @@ namespace IntermediateExercises.Structures
         public override string ToString()
         {
             //return "Hello!, My name is " + m_name;
-            return m_name + " - " + m_age;
+            //return m_name + " - " + m_age;
+
+            StringBuilder str = new StringBuilder();
+
+            str.AppendLine("Name: " + m_name);
+            str.AppendLine("Age: " + m_age);
+            str.AppendLine("City Name: " + city.Name);
+            str.AppendLine("City Population: " + city.Population);
+
+            return str.ToString();
         }
 
         ~Person()
