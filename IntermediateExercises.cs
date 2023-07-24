@@ -2,6 +2,7 @@
 {
     using Arithmetic;
     using Arrays;
+    using Base;
     using BinaryFiles;
     using DataTypesB;
     using FlowControlsA;
@@ -10,15 +11,15 @@
     using FunctionsA;
     using FunctionsB;
     using FunctionsC;
+    using GenericCollections;
     using GeometryA;
     using GeometryB;
-    using SQLite;
     using OOP;
     using Recursion;
+    using SQLite;
     using TextFilesA;
     using TextFilesB;
-    using GenericCollections;
-    using Base;
+    using DataSerialization;
 
     class IntermediateExercises
     {
@@ -132,7 +133,7 @@
             //LowerToUpperFile.ChangeLowerToUpperFile();
             //WordCounter.CountWordsInFile();
 
-            // Generic Collections
+            //// Generic Collections
             //ArrayPersonList list = new ArrayPersonList();
             //list.PrintPerson();
 
@@ -142,8 +143,8 @@
             //queue.DeQueue();
             //Printing.PrintIntLine(queue.DeQueue());
 
-            //ObjectQueue queue = new ObjectQueue();
-            //queue.PrintPersonInQueue();
+            //ObjectQueue objectQueue = new ObjectQueue();
+            //objectQueue.PrintPersonInQueue();
 
             //StackArrays stack = new StackArrays(10);
             //stack.Push(1);
@@ -154,8 +155,10 @@
             //Printing.PrintIntLine(val1);
             //Printing.PrintIntLine(val2);
 
-            StackObjects stack = new StackObjects();
-            stack.PrintPersonInQueue();
+            //StackObjects objectStack = new StackObjects();
+            //objectStack.PrintPersonInQueue();
+
+            BinarySerialization.CreatePersonInBinarySerialization();
         }
     }
 }
