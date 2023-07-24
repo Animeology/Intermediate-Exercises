@@ -160,7 +160,9 @@
 
             //BinarySerialization.CreatePersonInBinarySerialization();
 
-            XMLSerialization.CreatePersonInXMLSerialization();
+            //XMLSerialization.CreatePersonInXMLSerialization();
+
+            JavaScriptSerialization.CreatePersonInJSSerialization();
         }
     }
 }
