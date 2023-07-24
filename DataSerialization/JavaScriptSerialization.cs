@@ -4,7 +4,6 @@
     using Nancy.Json;
     using Structures;
     using System.IO;
-    using System.Text.Json;
 
     public class JavaScriptSerialization
     {
