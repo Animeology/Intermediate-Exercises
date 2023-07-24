@@ -158,7 +158,9 @@
             //StackObjects objectStack = new StackObjects();
             //objectStack.PrintPersonInQueue();
 
-            BinarySerialization.CreatePersonInBinarySerialization();
+            //BinarySerialization.CreatePersonInBinarySerialization();
+
+            XMLSerialization.CreatePersonInXMLSerialization();
         }
     }
 }
