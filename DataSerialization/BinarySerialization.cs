@@ -10,7 +10,7 @@ namespace IntermediateExercises.DataSerialization
         static void Serialize(Person person)
         {
             BinaryFormatter bf = new BinaryFormatter();
-            string fileName = "binarySerialization.json";
+            string fileName = "binarySerialization.bin";
 
             using (Stream stream = new FileStream(
                     fileName,
@@ -27,7 +27,7 @@ namespace IntermediateExercises.DataSerialization
         static Person Deserialize()
         {
             BinaryFormatter bf = new BinaryFormatter();
-            string fileName = "binarySerialization.json";
+            string fileName = "binarySerialization.bin";
 
             using (Stream stream = new FileStream(
                     fileName,
