@@ -162,7 +162,9 @@
 
             //XMLSerialization.CreatePersonInXMLSerialization();
 
-            JavaScriptSerialization.CreatePersonInJSSerialization();
+            //JavaScriptSerialization.CreatePersonInJSSerialization();
+
+            DataContractJsonSerialization.CreatePersonInDataContractSerialization();
         }
     }
 }
