@@ -164,7 +164,9 @@
 
             //JavaScriptSerialization.CreatePersonInJSSerialization();
 
-            DataContractJsonSerialization.CreatePersonInDataContractSerialization();
+            //DataContractJsonSerialization.CreatePersonInDataContractSerialization();
+
+            NewtonsoftSerialization.CreatePersonInNewtonsoftSerialization();
         }
     }
 }
