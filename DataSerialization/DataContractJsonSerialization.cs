@@ -6,7 +6,7 @@
 
     public class DataContractJsonSerialization
     {
-        public static void Serialize(Person person)
+        static void Serialize(Person person)
         {
             string fileName = "DataContractSerialization.json";
 
@@ -21,7 +21,7 @@
             }
         }
 
-        public static Person Deserialize()
+        static Person Deserialize()
         {
             string fileName = "DataContractSerialization.json";
 
